@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viseyyon pricing plans - from free tiers to enterprise solutions. Find the right plan for your needs.">
+  <title>Pricing | Viseyyon Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .pricing-card { position: relative; }
+    .pricing-card.popular { border: 2px solid var(--primary); }
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-gradient);
+      color: white;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .check-icon { color: var(--accent-green); margin-right: 8px; }
+    .pricing-feature { display: flex; align-items: flex-start; padding: 8px 0; }
+    .pricing-feature svg { flex-shrink: 0; margin-right: 12px; margin-top: 2px; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="pricing.html" class="nav-link" style="color: var(--primary);">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section style="padding: 160px 0 80px; background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);">
+    <div class="container">
+      <div class="section-header">
+        <h1>Simple, Transparent <span class="text-gradient">Pricing</span></h1>
+        <p style="font-size: 1.25rem;">Start free, scale as you grow. No hidden fees.</p>
+      </div>
+
+      <!-- Toggle -->
+      <div class="pricing-toggle">
+        <span class="pricing-monthly active">Monthly</span>
+        <div class="toggle-switch" id="pricingToggle"></div>
+        <span class="pricing-annual">Annual <span style="background: var(--accent-green); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; margin-left: 4px;">Save 20%</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consumer Pricing -->
+  <section class="section" style="background: var(--white); padding-top: 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 0.5rem;">Consumer & Prosumer</h2>
+      <p style="text-align: center; color: var(--gray-600); margin-bottom: 3rem;">For individuals and small teams</p>
+
+      <div class="grid grid-4" style="gap: 1.5rem;">
+        <!-- Free -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Free</div>
+            <div class="pricing-price" data-monthly="0" data-annual="0">$0<span>/forever</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">Perfect for getting started</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>50 prompts/month (AIWhisper)</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>5 meetings/month (ConvoCapture)</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>10 tasks/month (FlowDo)</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>30 min/day tutoring (LearnSpark)</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Community support</span>
+            </div>
+          </div>
+          <a href="signup.html" class="btn btn-secondary" style="width: 100%;">Get Started Free</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="pricing-card popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="pricing-header">
+            <div class="pricing-name">Pro</div>
+            <div class="pricing-price" data-monthly="19" data-annual="15">$19<span>/month</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">For power users</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> prompts</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> meetings</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> tasks</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> tutoring</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>All premium templates</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Priority support</span>
+            </div>
+          </div>
+          <a href="signup.html?plan=pro" class="btn btn-primary" style="width: 100%;">Start 14-Day Trial</a>
+        </div>
+
+        <!-- Teams -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Teams</div>
+            <div class="pricing-price" data-monthly="49" data-annual="39">$49<span>/month</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">Up to 10 users</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Everything in Pro</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>10 team members</strong></span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Shared libraries</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Team analytics</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Admin dashboard</span>
+            </div>
+          </div>
+          <a href="signup.html?plan=teams" class="btn btn-secondary" style="width: 100%;">Start Trial</a>
+        </div>
+
+        <!-- Family -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Family</div>
+            <div class="pricing-price" data-monthly="29" data-annual="23">$29<span>/month</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">Up to 5 family members</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Everything in Pro</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>5 family members</strong></span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Parental controls</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Progress tracking</span>
+            </div>
+          </div>
+          <a href="signup.html?plan=family" class="btn btn-secondary" style="width: 100%;">Start Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Pricing -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 0.5rem;">Business & SMB</h2>
+      <p style="text-align: center; color: var(--gray-600); margin-bottom: 3rem;">For growing businesses</p>
+
+      <div class="grid grid-3" style="gap: 2rem;">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Starter</div>
+            <div class="pricing-price" data-monthly="99" data-annual="79">$99<span>/month</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">For small businesses</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>2 AI employees (BizBot)</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>10 RCA analyses/month</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>20 contract reviews/month</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>5 data sources</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Email support</span>
+            </div>
+          </div>
+          <a href="signup.html?plan=starter" class="btn btn-secondary" style="width: 100%;">Start Trial</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="pricing-card popular">
+          <div class="popular-badge">Best Value</div>
+          <div class="pricing-header">
+            <div class="pricing-name">Growth</div>
+            <div class="pricing-price" data-monthly="299" data-annual="239">$299<span>/month</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">For scaling businesses</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>5 AI employees</strong> (BizBot)</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>100 RCA analyses</strong>/month</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> contract reviews</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> data sources</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Slack/Teams integration</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Priority support</span>
+            </div>
+          </div>
+          <a href="signup.html?plan=growth" class="btn btn-primary" style="width: 100%;">Start Trial</a>
+        </div>
+
+        <!-- Professional -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <div class="pricing-name">Professional</div>
+            <div class="pricing-price" data-monthly="599" data-annual="479">$599<span>/month</span></div>
+            <p style="color: var(--gray-500); font-size: 0.875rem;">For established businesses</p>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>10 AI employees</strong></span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Unlimited</strong> everything</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>API access</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Custom integrations</span>
+            </div>
+            <div class="pricing-feature">
+              <svg width="16" height="16" fill="var(--accent-green)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Dedicated account manager</span>
+            </div>
+          </div>
+          <a href="signup.html?plan=professional" class="btn btn-secondary" style="width: 100%;">Start Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enterprise Pricing -->
+  <section class="section" style="background: var(--dark-bg); color: var(--white);">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 0.5rem; color: var(--white);">Enterprise</h2>
+      <p style="text-align: center; color: var(--gray-400); margin-bottom: 3rem;">For large organizations with custom needs</p>
+
+      <div class="grid grid-3" style="gap: 2rem;">
+        <!-- NEXUS-RCA Enterprise -->
+        <div style="background: var(--dark-surface); border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--dark-border);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" fill="white" stroke="white" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <h3 style="color: var(--white); margin: 0;">NEXUS-RCA Enterprise</h3>
+              <p style="color: var(--gray-400); margin: 0; font-size: 0.875rem;">Multi-agent AI RCA</p>
+            </div>
+          </div>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--white); margin-bottom: 1rem;">$150K - $500K<span style="font-size: 1rem; font-weight: 400; color: var(--gray-400);">/year</span></div>
+          <ul style="color: var(--gray-300); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;">5 LLM consensus engine</li>
+            <li style="padding: 0.5rem 0;">Kernel symbol resolution</li>
+            <li style="padding: 0.5rem 0;">Multi-project support</li>
+            <li style="padding: 0.5rem 0;">On-premise deployment</li>
+            <li style="padding: 0.5rem 0;">24/7 dedicated support</li>
+          </ul>
+          <a href="contact.html?product=nexus-rca" class="btn btn-outline-white" style="width: 100%;">Contact Sales</a>
+        </div>
+
+        <!-- SYNAPSE AI Enterprise -->
+        <div style="background: var(--dark-surface); border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--dark-border);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" fill="white"><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div>
+              <h3 style="color: var(--white); margin: 0;">SYNAPSE AI Suite</h3>
+              <p style="color: var(--gray-400); margin: 0; font-size: 0.875rem;">Prompt Engineering Platform</p>
+            </div>
+          </div>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--white); margin-bottom: 1rem;">$50K - $150K<span style="font-size: 1rem; font-weight: 400; color: var(--gray-400);">/year</span></div>
+          <ul style="color: var(--gray-300); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;">54+ prompting techniques</li>
+            <li style="padding: 0.5rem 0;">Self-evolving prompts</li>
+            <li style="padding: 0.5rem 0;">RAG integration</li>
+            <li style="padding: 0.5rem 0;">Enterprise SSO</li>
+            <li style="padding: 0.5rem 0;">Custom technique training</li>
+          </ul>
+          <a href="contact.html?product=synapse" class="btn btn-outline-white" style="width: 100%;">Contact Sales</a>
+        </div>
+
+        <!-- Custom Enterprise -->
+        <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2)); border-radius: var(--radius-xl); padding: 2rem; border: 2px solid var(--primary);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 48px; height: 48px; background: var(--primary-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" fill="white"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+            </div>
+            <div>
+              <h3 style="color: var(--white); margin: 0;">Custom Enterprise</h3>
+              <p style="color: var(--gray-400); margin: 0; font-size: 0.875rem;">Tailored to your needs</p>
+            </div>
+          </div>
+          <div style="font-size: 2rem; font-weight: 800; color: var(--white); margin-bottom: 1rem;">Custom<span style="font-size: 1rem; font-weight: 400; color: var(--gray-400);"> pricing</span></div>
+          <ul style="color: var(--gray-300); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;">All products included</li>
+            <li style="padding: 0.5rem 0;">Custom development</li>
+            <li style="padding: 0.5rem 0;">On-premise or private cloud</li>
+            <li style="padding: 0.5rem 0;">SLA guarantees</li>
+            <li style="padding: 0.5rem 0;">Executive briefings</li>
+          </ul>
+          <a href="contact.html?plan=enterprise" class="btn btn-primary" style="width: 100%;">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background: var(--white);">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="background: var(--gray-50); border-radius: var(--radius-lg); padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">Can I switch plans anytime?</h4>
+          <p style="color: var(--gray-600); margin: 0;">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and we'll prorate your billing.</p>
+        </div>
+        <div style="background: var(--gray-50); border-radius: var(--radius-lg); padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">Is there a free trial for business plans?</h4>
+          <p style="color: var(--gray-600); margin: 0;">Yes, all business plans come with a 14-day free trial. No credit card required to start.</p>
+        </div>
+        <div style="background: var(--gray-50); border-radius: var(--radius-lg); padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">What payment methods do you accept?</h4>
+          <p style="color: var(--gray-600); margin: 0;">We accept all major credit cards, PayPal, and wire transfers for enterprise customers.</p>
+        </div>
+        <div style="background: var(--gray-50); border-radius: var(--radius-lg); padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">Do you offer discounts for nonprofits or education?</h4>
+          <p style="color: var(--gray-600); margin: 0;">Yes, we offer 50% off for verified nonprofits and educational institutions. Contact us for details.</p>
+        </div>
+        <div style="background: var(--gray-50); border-radius: var(--radius-lg); padding: 1.5rem;">
+          <h4 style="margin-bottom: 0.5rem;">What's included in enterprise support?</h4>
+          <p style="color: var(--gray-600); margin: 0;">Enterprise plans include 24/7 phone and chat support, dedicated account manager, custom SLAs, and on-site training options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Start Your Free Trial Today</h2>
+      <p>No credit card required. Cancel anytime.</p>
+      <div class="cta-buttons">
+        <a href="signup.html" class="btn btn-white btn-lg">Get Started Free</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="products.html">All Products</a>
+            <a href="../products/nexus-rca.html">NEXUS-RCA</a>
+            <a href="../products/synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="careers.html">Careers</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

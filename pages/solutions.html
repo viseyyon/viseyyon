@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viseyyon Solutions - AI-powered solutions for IoT, DevOps, Healthcare, Enterprise, and Small Business.">
+  <title>Solutions | Viseyyon Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .solution-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-base);
+    }
+    .solution-card:hover {
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-light);
+      transform: translateY(-4px);
+    }
+    .solution-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .solution-tag {
+      display: inline-block;
+      background: var(--gray-100);
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="solutions.html" class="nav-link" style="color: var(--primary);">Solutions</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section style="padding: 160px 0 80px; background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);">
+    <div class="container">
+      <div class="section-header">
+        <h1>Solutions for <span class="text-gradient">Every Industry</span></h1>
+        <p style="font-size: 1.25rem;">Tailored AI-powered solutions designed to solve your industry's unique challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IoT Solutions -->
+  <section id="iot" class="section" style="background: var(--white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div class="solution-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+            <svg width="36" height="36" fill="none" stroke="white" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+          </div>
+          <h2>Connected Devices & IoT</h2>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 1.5rem;">
+            Managing millions of connected devices requires specialized tools. Our solutions handle the complexity of embedded systems, firmware updates, and real-time diagnostics at scale.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <span class="solution-tag">100M+ Devices</span>
+            <span class="solution-tag">Real-time Analytics</span>
+            <span class="solution-tag">OTA Updates</span>
+            <span class="solution-tag">Edge Computing</span>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Recommended Products:</h4>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><a href="../products/nexus-rca.html" style="color: var(--primary);">NEXUS-RCA</a> - Root cause analysis for device failures</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/synapse-ai.html" style="color: var(--primary);">SYNAPSE AI</a> - Predictive maintenance</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/incidentiq.html" style="color: var(--primary);">IncidentIQ</a> - Automated incident response</li>
+          </ul>
+          <a href="contact.html?solution=iot" class="btn btn-primary">Talk to an Expert</a>
+        </div>
+        <div style="background: var(--gray-50); border-radius: var(--radius-2xl); padding: 2rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">100M+</div>
+              <div style="color: var(--gray-600); font-size: 0.875rem;">Devices Managed</div>
+            </div>
+            <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">99.9%</div>
+              <div style="color: var(--gray-600); font-size: 0.875rem;">Uptime</div>
+            </div>
+            <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">60%</div>
+              <div style="color: var(--gray-600); font-size: 0.875rem;">Faster Resolution</div>
+            </div>
+            <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">10B+</div>
+              <div style="color: var(--gray-600); font-size: 0.875rem;">Events/Day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DevOps Solutions -->
+  <section id="devops" class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div style="background: var(--white); border-radius: var(--radius-2xl); padding: 2rem; order: 1;">
+          <div style="background: #0f172a; border-radius: 12px; padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+            <div style="color: #64748b;"># Automated CI/CD optimization</div>
+            <div style="margin-top: 0.5rem; color: #38bdf8;">$ synapse optimize --pipeline main</div>
+            <div style="margin-top: 1rem; color: #64748b;">Analyzing 847 pipeline runs...</div>
+            <div style="color: #22c55e;">Found 12 optimization opportunities</div>
+            <div style="color: #f8fafc; margin-top: 0.5rem;">- Parallel test execution: -45% time</div>
+            <div style="color: #f8fafc;">- Cache optimization: -23% builds</div>
+            <div style="color: #f8fafc;">- Resource right-sizing: -$2.3k/mo</div>
+            <div style="margin-top: 1rem; color: #fbbf24;">Estimated savings: $47,000/year</div>
+          </div>
+        </div>
+        <div style="order: 2;">
+          <div class="solution-icon" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+            <svg width="36" height="36" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h2>DevOps & SRE Teams</h2>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 1.5rem;">
+            Accelerate your development lifecycle with AI-powered automation. From CI/CD optimization to incident management, we help DevOps teams ship faster and more reliably.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <span class="solution-tag">CI/CD Optimization</span>
+            <span class="solution-tag">Incident Response</span>
+            <span class="solution-tag">Infrastructure as Code</span>
+            <span class="solution-tag">Observability</span>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Recommended Products:</h4>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><a href="../products/synapse-ai.html" style="color: var(--primary);">SYNAPSE AI Suite</a> - Complete DevOps automation</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/codepilot.html" style="color: var(--primary);">SyntaxAI</a> - AI code review and suggestions</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/jira-intelligence.html" style="color: var(--primary);">IssueIQ</a> - Smart ticket management</li>
+          </ul>
+          <a href="contact.html?solution=devops" class="btn btn-primary">Talk to an Expert</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Healthcare Solutions -->
+  <section id="healthcare" class="section" style="background: var(--white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div class="solution-icon" style="background: linear-gradient(135deg, #10b981, #047857);">
+            <svg width="36" height="36" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h2>Healthcare</h2>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 1.5rem;">
+            HIPAA-compliant AI solutions designed for healthcare organizations. Streamline operations, improve patient outcomes, and maintain strict regulatory compliance.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <span class="solution-tag">HIPAA Compliant</span>
+            <span class="solution-tag">Patient Data Security</span>
+            <span class="solution-tag">Clinical Workflows</span>
+            <span class="solution-tag">Audit Trails</span>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Recommended Products:</h4>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><a href="../products/compliancehub.html" style="color: var(--primary);">ComplianceX</a> - Regulatory compliance automation</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/keyguardian.html" style="color: var(--primary);">KeyGuardian Pro</a> - Healthcare data security</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/meetingmind.html" style="color: var(--primary);">ConvoCapture</a> - Clinical meeting transcription</li>
+          </ul>
+          <a href="contact.html?solution=healthcare" class="btn btn-primary">Talk to an Expert</a>
+        </div>
+        <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(4, 120, 87, 0.1)); border-radius: var(--radius-2xl); padding: 2.5rem;">
+          <h4 style="margin-bottom: 1.5rem;">Compliance Certifications</h4>
+          <div style="display: grid; gap: 1rem;">
+            <div style="background: var(--white); border-radius: var(--radius-lg); padding: 1rem; display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; background: #10b981; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <div style="font-weight: 600;">HIPAA Compliant</div>
+                <div style="font-size: 0.875rem; color: var(--gray-500);">Full PHI protection</div>
+              </div>
+            </div>
+            <div style="background: var(--white); border-radius: var(--radius-lg); padding: 1rem; display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; background: #10b981; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <div style="font-weight: 600;">SOC 2 Type II</div>
+                <div style="font-size: 0.875rem; color: var(--gray-500);">Audited security controls</div>
+              </div>
+            </div>
+            <div style="background: var(--white); border-radius: var(--radius-lg); padding: 1rem; display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; background: #10b981; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <div style="font-weight: 600;">HITRUST Certified</div>
+                <div style="font-size: 0.875rem; color: var(--gray-500);">Healthcare security framework</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enterprise Solutions -->
+  <section id="enterprise" class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div style="order: 2;">
+          <div class="grid grid-2" style="gap: 1.5rem;">
+            <div class="solution-card">
+              <h4 style="margin-bottom: 0.5rem;">Global Scale</h4>
+              <p style="color: var(--gray-600); font-size: 0.875rem;">Deploy across regions with enterprise-grade infrastructure and 99.99% uptime SLA.</p>
+            </div>
+            <div class="solution-card">
+              <h4 style="margin-bottom: 0.5rem;">Custom Integration</h4>
+              <p style="color: var(--gray-600); font-size: 0.875rem;">Connect with your existing enterprise systems through APIs and custom connectors.</p>
+            </div>
+            <div class="solution-card">
+              <h4 style="margin-bottom: 0.5rem;">Dedicated Support</h4>
+              <p style="color: var(--gray-600); font-size: 0.875rem;">24/7 priority support with dedicated account managers and SLA guarantees.</p>
+            </div>
+            <div class="solution-card">
+              <h4 style="margin-bottom: 0.5rem;">On-Premise Option</h4>
+              <p style="color: var(--gray-600); font-size: 0.875rem;">Deploy in your own data center or private cloud for maximum control.</p>
+            </div>
+          </div>
+        </div>
+        <div style="order: 1;">
+          <div class="solution-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <svg width="36" height="36" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h2>Enterprise</h2>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 1.5rem;">
+            Comprehensive AI solutions for Fortune 500 companies. Enterprise-grade security, global scalability, and dedicated support to transform your organization.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <span class="solution-tag">SSO/SAML</span>
+            <span class="solution-tag">Role-Based Access</span>
+            <span class="solution-tag">Audit Logs</span>
+            <span class="solution-tag">Data Residency</span>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Recommended Products:</h4>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><a href="../products/agentforge.html" style="color: var(--primary);">AgentForge</a> - Custom AI agent platform</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/synapse-ai.html" style="color: var(--primary);">SYNAPSE AI Suite</a> - Enterprise automation</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/compliancehub.html" style="color: var(--primary);">ComplianceX</a> - Enterprise compliance</li>
+          </ul>
+          <a href="contact.html?solution=enterprise" class="btn btn-primary">Talk to an Expert</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMB Solutions -->
+  <section id="smb" class="section" style="background: var(--white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div class="solution-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);">
+            <svg width="36" height="36" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h2>Small Business</h2>
+          <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 1.5rem;">
+            Enterprise-grade AI made accessible for growing businesses. Affordable pricing, easy setup, and powerful features to help you compete with the big players.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <span class="solution-tag">Free Tier Available</span>
+            <span class="solution-tag">No Credit Card</span>
+            <span class="solution-tag">Quick Setup</span>
+            <span class="solution-tag">Pay As You Grow</span>
+          </div>
+          <h4 style="margin-bottom: 1rem;">Recommended Products:</h4>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><a href="../products/promptgenius.html" style="color: var(--primary);">AIWhisper</a> - AI prompt optimization</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/meetingmind.html" style="color: var(--primary);">ConvoCapture</a> - Meeting transcription</li>
+            <li style="padding: 0.5rem 0;"><a href="../products/bizbot-suite.html" style="color: var(--primary);">BizBot Suite</a> - Business automation</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary">Start Free</a>
+        </div>
+        <div style="background: var(--gray-50); border-radius: var(--radius-2xl); padding: 2.5rem; text-align: center;">
+          <h3 style="margin-bottom: 1rem;">Start Free, Scale as You Grow</h3>
+          <p style="color: var(--gray-600); margin-bottom: 2rem;">No credit card required. Free tier includes generous usage limits.</p>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem;">
+            <div style="padding: 1rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">$0</div>
+              <div style="font-size: 0.75rem; color: var(--gray-500);">to start</div>
+            </div>
+            <div style="padding: 1rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">5min</div>
+              <div style="font-size: 0.75rem; color: var(--gray-500);">setup time</div>
+            </div>
+            <div style="padding: 1rem; background: var(--white); border-radius: var(--radius-lg);">
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">24/7</div>
+              <div style="font-size: 0.75rem; color: var(--gray-500);">support</div>
+            </div>
+          </div>
+          <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Not Sure Which Solution is Right for You?</h2>
+      <p>Our team will help you find the perfect fit for your needs.</p>
+      <div class="cta-buttons">
+        <a href="demo.html" class="btn btn-white btn-lg">Request Demo</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="products.html">All Products</a>
+            <a href="../products/nexus-rca.html">NEXUS-RCA</a>
+            <a href="../products/synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="careers.html">Careers</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

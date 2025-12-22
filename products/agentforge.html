@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgentForge - Build, deploy, and manage AI agents at scale. Low-code platform for creating intelligent automation workflows.">
+  <title>AgentForge | AI Agent Platform | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #581c87 0%, #7c3aed 50%, #a78bfa 100%); color: white; position: relative; overflow: hidden; }
+    .product-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E"); }
+    .agent-node { background: white; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 0.75rem; min-width: 200px; }
+    .node-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .workflow-line { position: absolute; background: linear-gradient(90deg, #7c3aed, #a78bfa); height: 2px; }
+    .capability-card { background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200); transition: all 0.3s ease; }
+    .capability-card:hover { border-color: #7c3aed; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.1); transform: translateY(-4px); }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v10"/><path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/><path d="M1 12h6m6 0h10"/><path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/></svg>
+            AI Platform
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            AgentForge<br><span style="opacity: 0.8;">Build AI Agents</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.7;">
+            Visual builder for AI agents. Connect LLMs, tools, and data sources. Deploy autonomous workflows that think, reason, and act.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="../pages/signup.html" class="btn btn-white btn-lg">Start Building Free</a>
+            <a href="../pages/demo.html" class="btn btn-outline-white btn-lg">Watch Demo</a>
+          </div>
+          <div style="display: flex; gap: 2rem; font-size: 0.9375rem;">
+            <div><span style="font-weight: 700; font-size: 1.5rem;">50+</span><br><span style="opacity: 0.8;">Pre-built agents</span></div>
+            <div><span style="font-weight: 700; font-size: 1.5rem;">100+</span><br><span style="opacity: 0.8;">Integrations</span></div>
+            <div><span style="font-weight: 700; font-size: 1.5rem;">10K+</span><br><span style="opacity: 0.8;">Agents deployed</span></div>
+          </div>
+        </div>
+        <div style="position: relative; height: 400px;">
+          <!-- Workflow visualization -->
+          <div style="position: absolute; top: 20px; left: 20px;" class="agent-node">
+            <div class="node-icon" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 600; color: var(--gray-800);">Input Trigger</div>
+              <div style="font-size: 0.6875rem; color: var(--gray-500);">Slack message</div>
+            </div>
+          </div>
+
+          <div style="position: absolute; top: 120px; left: 140px;" class="agent-node">
+            <div class="node-icon" style="background: linear-gradient(135deg, #f3e8ff, #e9d5ff);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v10"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 600; color: var(--gray-800);">AI Classifier</div>
+              <div style="font-size: 0.6875rem; color: var(--gray-500);">GPT-4o</div>
+            </div>
+          </div>
+
+          <div style="position: absolute; top: 220px; left: 40px;" class="agent-node">
+            <div class="node-icon" style="background: linear-gradient(135deg, #dcfce7, #bbf7d0);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 600; color: var(--gray-800);">Doc Search</div>
+              <div style="font-size: 0.6875rem; color: var(--gray-500);">RAG lookup</div>
+            </div>
+          </div>
+
+          <div style="position: absolute; top: 220px; left: 260px;" class="agent-node">
+            <div class="node-icon" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 600; color: var(--gray-800);">Jira Action</div>
+              <div style="font-size: 0.6875rem; color: var(--gray-500);">Create ticket</div>
+            </div>
+          </div>
+
+          <div style="position: absolute; bottom: 40px; left: 160px;" class="agent-node">
+            <div class="node-icon" style="background: linear-gradient(135deg, #fee2e2, #fecaca);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 600; color: var(--gray-800);">Response</div>
+              <div style="font-size: 0.6875rem; color: var(--gray-500);">Send reply</div>
+            </div>
+          </div>
+
+          <!-- Connection lines (simplified) -->
+          <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 500 400">
+            <defs>
+              <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.5"/>
+              </linearGradient>
+            </defs>
+            <path d="M 120 50 Q 160 85 180 130" stroke="url(#lineGrad)" stroke-width="2" fill="none"/>
+            <path d="M 200 170 Q 140 195 140 220" stroke="url(#lineGrad)" stroke-width="2" fill="none"/>
+            <path d="M 260 170 Q 320 195 320 220" stroke="url(#lineGrad)" stroke-width="2" fill="none"/>
+            <path d="M 140 280 Q 180 320 200 340" stroke="url(#lineGrad)" stroke-width="2" fill="none"/>
+            <path d="M 320 280 Q 280 320 260 340" stroke="url(#lineGrad)" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section style="padding: 100px 0; background: var(--gray-50);">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Build Agents, Not Prompts</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600);">Visual workflow builder meets enterprise-grade AI infrastructure.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <div class="capability-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Visual Builder</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Drag-and-drop workflow builder. Connect nodes, configure logic, and deploy in minutes.</p>
+        </div>
+        <div class="capability-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #dbeafe, #bfdbfe); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Multi-Model Support</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Use GPT-4, Claude, Gemini, or Llama. Switch models per node for optimal cost and performance.</p>
+        </div>
+        <div class="capability-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #dcfce7, #bbf7d0); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Tool Library</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">100+ pre-built tools. Web search, database queries, API calls, file operations, and custom functions.</p>
+        </div>
+        <div class="capability-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><circle cx="12" cy="13" r="2"/><path d="M12 15v5"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">RAG Built-In</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Vector database integration. Index your documents, PDFs, and knowledge base for context-aware responses.</p>
+        </div>
+        <div class="capability-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fee2e2, #fecaca); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Guardrails</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Built-in safety controls. Content filtering, PII detection, cost limits, and human-in-the-loop approval.</p>
+        </div>
+        <div class="capability-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #e0e7ff, #c7d2fe); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Observability</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Full execution traces. Monitor latency, costs, and errors. Debug agent reasoning step by step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Agents for Every Workflow</h2>
+          <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem; line-height: 1.7;">From customer support to data analysis, build agents that automate complex multi-step processes.</p>
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: var(--gray-50); border-radius: 0.75rem;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #7c3aed, #a78bfa); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">Customer Support Agent</h4>
+                <p style="color: var(--gray-600); font-size: 0.875rem;">Triage tickets, search knowledge base, draft responses, escalate complex issues.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: var(--gray-50); border-radius: 0.75rem;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #7c3aed, #a78bfa); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">Document Processing Agent</h4>
+                <p style="color: var(--gray-600); font-size: 0.875rem;">Extract data from PDFs, validate information, update databases, generate reports.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem; padding: 1.25rem; background: var(--gray-50); border-radius: 0.75rem;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #7c3aed, #a78bfa); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0.25rem;">Code Review Agent</h4>
+                <p style="color: var(--gray-600); font-size: 0.875rem;">Analyze PRs, check for bugs, suggest improvements, enforce coding standards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, #581c87, #7c3aed); border-radius: 1.5rem; padding: 2rem; color: white;">
+          <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Pre-Built Agent Templates</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Sales Assistant</div>
+              <div style="opacity: 0.7; font-size: 0.75rem;">Lead qualification & CRM</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">HR Recruiter</div>
+              <div style="opacity: 0.7; font-size: 0.75rem;">Resume screening</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Data Analyst</div>
+              <div style="opacity: 0.7; font-size: 0.75rem;">SQL & visualization</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Content Writer</div>
+              <div style="opacity: 0.7; font-size: 0.75rem;">Blog & social posts</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Research Agent</div>
+              <div style="opacity: 0.7; font-size: 0.75rem;">Web & document search</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">QA Tester</div>
+              <div style="opacity: 0.7; font-size: 0.75rem;">Test case generation</div>
+            </div>
+          </div>
+          <p style="margin-top: 1.5rem; font-size: 0.875rem; opacity: 0.8; text-align: center;">+ 44 more templates available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section style="padding: 100px 0; background: linear-gradient(135deg, #581c87 0%, #7c3aed 100%); color: white;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Start Building AI Agents</h2>
+        <p style="font-size: 1.125rem; opacity: 0.9;">Free tier available. Scale as your agents grow.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Starter</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem; margin-bottom: 1.5rem;">For exploration</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">Free</div>
+          <p style="opacity: 0.7; font-size: 0.875rem; margin-bottom: 2rem;">Forever free</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 3 agents</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1,000 runs/month</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic tools</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Community support</li>
+          </ul>
+          <a href="../pages/signup.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Get Started</a>
+        </div>
+        <div style="background: white; color: var(--gray-900); border-radius: 1rem; padding: 2rem; position: relative; transform: scale(1.05);">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #581c87, #7c3aed); color: white; padding: 0.25rem 1rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600;">MOST POPULAR</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Pro</h3>
+          <p style="color: var(--gray-600); font-size: 0.875rem; margin-bottom: 1.5rem;">For teams</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$99<span style="font-size: 1rem; font-weight: 500; color: var(--gray-500);">/mo</span></div>
+          <p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 2rem;">+ usage</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Unlimited agents</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 50,000 runs/month</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All tools & models</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority support</li>
+          </ul>
+          <a href="../pages/signup.html" class="btn btn-primary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #581c87, #7c3aed);">Start Free Trial</a>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Enterprise</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem; margin-bottom: 1.5rem;">For scale</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">Custom</div>
+          <p style="opacity: 0.7; font-size: 0.875rem; margin-bottom: 2rem;">Contact for pricing</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Everything in Pro</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Self-hosted option</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom integrations</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dedicated support</li>
+          </ul>
+          <a href="../pages/contact.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Build Your First Agent?</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">Join thousands of developers building the future of automation.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+          <a href="../pages/signup.html" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #581c87, #7c3aed);">Start Building Free</a>
+          <a href="../pages/demo.html" class="btn btn-outline btn-lg">Watch Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" style="margin-bottom: 1rem;">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </a>
+          <p style="color: var(--gray-400); margin-bottom: 1.5rem;">Enterprise AI solutions for modern teams. Building the future of intelligent automation.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="nexus-rca.html">NEXUS-RCA</a>
+          <a href="synapse-ai.html">SYNAPSE AI</a>
+          <a href="keyguardian.html">KeyGuardian</a>
+          <a href="agentforge.html">AgentForge</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/careers.html">Careers</a>
+          <a href="../pages/contact.html">Contact</a>
+          <a href="../pages/blog.html">Blog</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="../pages/privacy.html">Privacy Policy</a>
+          <a href="../pages/terms.html">Terms of Service</a>
+          <a href="../pages/security.html">Security</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

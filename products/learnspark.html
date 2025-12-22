@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LearnSpark - AI-powered adaptive learning platform. Personalized education that adapts to your learning style and pace.">
+  <title>LearnSpark | AI-Powered Learning | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%); color: white; position: relative; overflow: hidden; }
+    .product-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M40 0l40 40-40 40L0 40z'/%3E%3C/g%3E%3C/svg%3E"); }
+    .learning-card { background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+    .progress-ring { width: 120px; height: 120px; position: relative; }
+    .progress-ring svg { transform: rotate(-90deg); }
+    .progress-ring-circle { fill: none; stroke: #e5e7eb; stroke-width: 8; }
+    .progress-ring-progress { fill: none; stroke: url(#gradient); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 339.292; stroke-dashoffset: 84.823; }
+    .skill-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--gray-100); border-radius: 2rem; font-size: 0.8125rem; font-weight: 500; }
+    .lesson-item { display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: 0.75rem; cursor: pointer; transition: background 0.2s; }
+    .lesson-item:hover { background: var(--gray-50); }
+    .lesson-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            AI Education
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            LearnSpark<br><span style="opacity: 0.8;">Learn Your Way</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.7;">
+            AI-powered adaptive learning that understands how you learn best. Personalized paths, instant feedback, and progress that sticks.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="../pages/signup.html" class="btn btn-white btn-lg">Start Learning Free</a>
+            <a href="../pages/demo.html" class="btn btn-outline-white btn-lg">Explore Courses</a>
+          </div>
+          <div style="display: flex; gap: 2rem; font-size: 0.9375rem;">
+            <div><span style="font-weight: 700; font-size: 1.5rem;">500+</span><br><span style="opacity: 0.8;">Courses</span></div>
+            <div><span style="font-weight: 700; font-size: 1.5rem;">2M+</span><br><span style="opacity: 0.8;">Learners</span></div>
+            <div><span style="font-weight: 700; font-size: 1.5rem;">94%</span><br><span style="opacity: 0.8;">Completion rate</span></div>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div class="learning-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+              <div>
+                <h3 style="color: var(--gray-900); font-size: 1.125rem; margin-bottom: 0.25rem;">Your Progress</h3>
+                <p style="color: var(--gray-500); font-size: 0.8125rem;">Python Fundamentals</p>
+              </div>
+              <div class="progress-ring">
+                <svg width="120" height="120" viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#ea580c"/>
+                      <stop offset="100%" stop-color="#fb923c"/>
+                    </linearGradient>
+                  </defs>
+                  <circle class="progress-ring-circle" cx="60" cy="60" r="54"/>
+                  <circle class="progress-ring-progress" cx="60" cy="60" r="54"/>
+                </svg>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--gray-900);">75%</div>
+                  <div style="font-size: 0.625rem; color: var(--gray-500);">Complete</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <div style="font-weight: 600; font-size: 0.875rem; color: var(--gray-700); margin-bottom: 0.75rem;">Up Next</div>
+              <div class="lesson-item" style="background: #fff7ed; border: 1px solid #fed7aa;">
+                <div class="lesson-icon" style="background: linear-gradient(135deg, #ea580c, #fb923c); color: white;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div style="flex: 1;">
+                  <div style="font-size: 0.875rem; font-weight: 500; color: var(--gray-800);">Functions & Scope</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">12 min  Interactive</div>
+                </div>
+                <span style="background: #ea580c; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.625rem; font-weight: 600;">CONTINUE</span>
+              </div>
+              <div class="lesson-item">
+                <div class="lesson-icon" style="background: var(--gray-100);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <div style="flex: 1;">
+                  <div style="font-size: 0.875rem; font-weight: 500; color: var(--gray-800);">Data Structures</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">18 min  Quiz included</div>
+                </div>
+              </div>
+            </div>
+            <div style="background: var(--gray-50); border-radius: 0.75rem; padding: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
+                <span style="font-weight: 600; font-size: 0.8125rem; color: #ea580c;">AI Learning Tip</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--gray-600); margin: 0;">Based on your progress, try the "Hands-on Practice" section next. You retain 40% more with practice exercises!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section style="padding: 100px 0; background: var(--gray-50);">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Learning That Adapts to You</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600);">Our AI understands your learning style and creates the perfect path for you.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fff7ed, #fed7aa); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 1 1 0 20"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Adaptive Difficulty</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">AI adjusts content difficulty based on your performance. Never too easy, never too hard.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #dcfce7, #bbf7d0); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Interactive Exercises</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Learn by doing with hands-on coding, quizzes, and real-world projects. Immediate feedback on every attempt.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #dbeafe, #bfdbfe); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">AI Tutor</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Get instant help when stuck. Our AI explains concepts in multiple ways until it clicks.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Progress Analytics</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Track your learning journey with detailed insights. See strengths, gaps, and predicted completion.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Certifications</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Earn recognized certificates. Verify skills with blockchain-secured credentials.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fee2e2, #fecaca); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Study Groups</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Learn together with AI-matched study partners. Collaborate on projects and share insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Categories -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Learn Anything</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600);">From coding to creativity, we've got you covered.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+        <div style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); border-radius: 1rem; padding: 2rem; color: white; position: relative; overflow: hidden;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Programming</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">120+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #065f46, #10b981); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 1 1 0 20"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Data Science</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">85+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #7c2d12, #ea580c); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Design</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">75+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #581c87, #9333ea); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">AI & ML</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">60+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #0c4a6e, #0ea5e9); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Business</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">90+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #831843, #ec4899); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Creative</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">55+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #374151, #6b7280); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Cybersecurity</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">45+ courses</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #854d0e, #eab308); border-radius: 1rem; padding: 2rem; color: white;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Languages</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem;">30+ languages</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section style="padding: 100px 0; background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%); color: white;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Start Learning Today</h2>
+        <p style="font-size: 1.125rem; opacity: 0.9;">Free to start. Upgrade for unlimited access.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Free</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem; margin-bottom: 1.5rem;">Explore and try</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$0</div>
+          <p style="opacity: 0.7; font-size: 0.875rem; margin-bottom: 2rem;">Forever free</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 10 free courses</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic AI tutor</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Progress tracking</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Community access</li>
+          </ul>
+          <a href="../pages/signup.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Get Started</a>
+        </div>
+        <div style="background: white; color: var(--gray-900); border-radius: 1rem; padding: 2rem; position: relative; transform: scale(1.05);">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ea580c, #fb923c); color: white; padding: 0.25rem 1rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600;">BEST VALUE</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Pro</h3>
+          <p style="color: var(--gray-600); font-size: 0.875rem; margin-bottom: 1.5rem;">For serious learners</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$19<span style="font-size: 1rem; font-weight: 500; color: var(--gray-500);">/mo</span></div>
+          <p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 2rem;">Billed annually</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All 500+ courses</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Advanced AI tutor</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Certificates</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Offline access</li>
+          </ul>
+          <a href="../pages/signup.html" class="btn btn-primary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #ea580c, #fb923c);">Start Free Trial</a>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Teams</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem; margin-bottom: 1.5rem;">For organizations</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$29<span style="font-size: 1rem; font-weight: 500; opacity: 0.7;">/user/mo</span></div>
+          <p style="opacity: 0.7; font-size: 0.875rem; margin-bottom: 2rem;">Min 5 users</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Everything in Pro</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Team analytics</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom learning paths</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SSO & admin tools</li>
+          </ul>
+          <a href="../pages/contact.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Spark Your Learning?</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">Join 2 million learners already mastering new skills with AI.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+          <a href="../pages/signup.html" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #ea580c, #fb923c);">Start Learning Free</a>
+          <a href="../pages/demo.html" class="btn btn-outline btn-lg">Browse Courses</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" style="margin-bottom: 1rem;">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </a>
+          <p style="color: var(--gray-400); margin-bottom: 1.5rem;">Enterprise AI solutions for modern teams. Building the future of intelligent automation.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="nexus-rca.html">NEXUS-RCA</a>
+          <a href="synapse-ai.html">SYNAPSE AI</a>
+          <a href="keyguardian.html">KeyGuardian</a>
+          <a href="learnspark.html">LearnSpark</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/careers.html">Careers</a>
+          <a href="../pages/contact.html">Contact</a>
+          <a href="../pages/blog.html">Blog</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="../pages/privacy.html">Privacy Policy</a>
+          <a href="../pages/terms.html">Terms of Service</a>
+          <a href="../pages/security.html">Security</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

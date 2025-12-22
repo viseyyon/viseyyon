@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Iterion - Sprint retrospective and continuous improvement platform powered by AI insights and team analytics.">
+  <title>Iterion | Continuous Improvement | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; position: relative; overflow: hidden; }
+    .product-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 0l30 30-30 30L0 30z'/%3E%3C/g%3E%3C/svg%3E"); }
+    .feature-box { background: var(--white); border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200); transition: var(--transition-base); }
+    .feature-box:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div style="position: relative; z-index: 1;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <span style="width: 8px; height: 8px; background: #34d399; border-radius: 50%;"></span>
+            DevOps & CI/CD
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            Iterion<br><span style="opacity: 0.8;">Continuous Improvement</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.6;">
+            Sprint retrospective and continuous improvement platform powered by AI insights and team analytics.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="../pages/demo.html" class="btn btn-white btn-lg">Request Demo</a>
+            <a href="../pages/signup.html" class="btn btn-outline-white btn-lg">Start Free Trial</a>
+          </div>
+        </div>
+        <div style="position: relative; z-index: 1;">
+          <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1.5rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" fill="white" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div>
+                <div style="font-weight: 700; font-size: 1.25rem;">Iterion</div>
+                <div style="opacity: 0.8; font-size: 0.875rem;">Continuous Improvement</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem;">Agile</span> <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem;">Analytics</span> <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem;">Teams</span>
+            </div>
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2);">
+              <div style="font-size: 0.875rem; opacity: 0.8;">Starting at</div>
+              <div style="font-size: 2rem; font-weight: 800;">$149/mo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Key <span class="text-gradient">Features</span></h2>
+        <p>Everything you need to succeed with Iterion</p>
+      </div>
+      <div class="grid grid-3">
+                <div class="feature-box">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">AI Retrospectives</h3>
+          <p style="color: var(--gray-600);">Automated sprint analysis with actionable improvement suggestions.</p>
+        </div>
+        <div class="feature-box">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">Team Analytics</h3>
+          <p style="color: var(--gray-600);">Deep insights into team velocity and productivity patterns.</p>
+        </div>
+        <div class="feature-box">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">Goal Tracking</h3>
+          <p style="color: var(--gray-600);">OKR and KPI tracking with AI-powered forecasting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Ready to Get Started with Iterion?</h2>
+      <p style="margin-bottom: 2rem; opacity: 0.9;">Join thousands of companies transforming their business with Viseyyon.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="../pages/demo.html" class="btn btn-white btn-lg">Request Demo</a>
+        <a href="../pages/contact.html" class="btn btn-outline-white btn-lg">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p style="color: var(--gray-400);">AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="../pages/products.html">All Products</a>
+          <a href="nexus-rca.html">NEXUS-RCA</a>
+          <a href="synapse-ai.html">SYNAPSE AI</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/careers.html">Careers</a>
+          <a href="../pages/contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

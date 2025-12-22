@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viseyyon Changelog - Latest updates, new features, and improvements across all Viseyyon products.">
+  <title>Changelog | Viseyyon Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .changelog-entry {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      border: 1px solid var(--gray-200);
+      margin-bottom: 1.5rem;
+    }
+    .changelog-date {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin-bottom: 0.5rem;
+    }
+    .changelog-version {
+      display: inline-block;
+      background: var(--primary-gradient);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .changelog-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-right: 0.5rem;
+    }
+    .tag-new { background: #dcfce7; color: #166534; }
+    .tag-improved { background: #dbeafe; color: #1e40af; }
+    .tag-fixed { background: #fef3c7; color: #92400e; }
+    .tag-deprecated { background: #fee2e2; color: #991b1b; }
+    .changelog-list {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+    .changelog-list li {
+      padding: 0.5rem 0;
+      color: var(--gray-600);
+    }
+    .product-filter {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 0.875rem;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section style="padding: 160px 0 80px; background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);">
+    <div class="container">
+      <div class="section-header">
+        <h1><span class="text-gradient">Changelog</span></h1>
+        <p style="font-size: 1.25rem;">Stay up to date with the latest updates, new features, and improvements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Changelog -->
+  <section class="section" style="background: var(--white);">
+    <div class="container" style="max-width: 800px;">
+      <!-- Filters -->
+      <div class="product-filter">
+        <button class="filter-btn active">All Products</button>
+        <button class="filter-btn">NEXUS-RCA</button>
+        <button class="filter-btn">SYNAPSE AI</button>
+        <button class="filter-btn">KeyGuardian</button>
+        <button class="filter-btn">AgentForge</button>
+      </div>
+
+      <!-- December 2025 -->
+      <div class="changelog-entry">
+        <div class="changelog-date">December 15, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v2.5.0</span>
+          <span style="font-weight: 600;">NEXUS-RCA</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-new">New</span>
+          <span class="changelog-tag tag-improved">Improved</span>
+        </div>
+        <ul class="changelog-list">
+          <li><strong>Grok 2.0 Integration:</strong> Added Grok 2.0 as the 5th LLM agent in our consensus engine for faster triage</li>
+          <li><strong>Kernel Symbol Resolution:</strong> 40% faster symbol resolution with new caching layer</li>
+          <li><strong>JIRA Integration:</strong> Direct ticket creation and updates from analysis results</li>
+          <li>Improved accuracy for WiFi HAL failure detection</li>
+          <li>New dashboard widgets for trend analysis</li>
+        </ul>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-date">December 10, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v3.2.0</span>
+          <span style="font-weight: 600;">SYNAPSE AI</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-new">New</span>
+          <span class="changelog-tag tag-fixed">Fixed</span>
+        </div>
+        <ul class="changelog-list">
+          <li><strong>FlowForge:</strong> AI-powered recommendations for CI/CD pipeline optimization</li>
+          <li><strong>GitHub Actions Support:</strong> Native integration with GitHub Actions workflows</li>
+          <li>Fixed memory leak in long-running monitoring processes</li>
+          <li>Improved error messages for failed deployments</li>
+        </ul>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-date">December 5, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v1.8.0</span>
+          <span style="font-weight: 600;">AgentForge</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-new">New</span>
+        </div>
+        <ul class="changelog-list">
+          <li><strong>Visual Agent Builder:</strong> No-code interface for creating custom AI agents</li>
+          <li><strong>Template Library:</strong> 50+ pre-built agent templates for common use cases</li>
+          <li><strong>Multi-turn Conversations:</strong> Support for complex conversation flows</li>
+          <li>New webhook integrations for Slack and Teams</li>
+        </ul>
+      </div>
+
+      <!-- November 2025 -->
+      <div class="changelog-entry">
+        <div class="changelog-date">November 28, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v2.4.0</span>
+          <span style="font-weight: 600;">NEXUS-RCA</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-improved">Improved</span>
+          <span class="changelog-tag tag-fixed">Fixed</span>
+        </div>
+        <ul class="changelog-list">
+          <li>Improved consensus algorithm reduces false positives by 23%</li>
+          <li>Added support for Android kernel analysis</li>
+          <li>Fixed rare crash when processing very large log files (>500MB)</li>
+          <li>Performance improvements for batch analysis</li>
+        </ul>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-date">November 20, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v2.1.0</span>
+          <span style="font-weight: 600;">KeyGuardian Pro</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-new">New</span>
+          <span class="changelog-tag tag-improved">Improved</span>
+        </div>
+        <ul class="changelog-list">
+          <li><strong>Hardware Key Support:</strong> Integration with YubiKey and other FIDO2 devices</li>
+          <li><strong>Secret Rotation:</strong> Automated credential rotation with zero downtime</li>
+          <li>Improved audit logging with detailed access trails</li>
+          <li>New admin dashboard for team management</li>
+        </ul>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-date">November 15, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v3.1.0</span>
+          <span style="font-weight: 600;">SYNAPSE AI</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-new">New</span>
+        </div>
+        <ul class="changelog-list">
+          <li><strong>Cost Optimizer:</strong> AI-driven recommendations to reduce cloud infrastructure costs</li>
+          <li><strong>Resource Right-sizing:</strong> Automatic detection of over-provisioned resources</li>
+          <li>New integrations with AWS, GCP, and Azure cost APIs</li>
+        </ul>
+      </div>
+
+      <!-- October 2025 -->
+      <div class="changelog-entry">
+        <div class="changelog-date">October 30, 2025</div>
+        <div style="margin-bottom: 1rem;">
+          <span class="changelog-version">v2.3.0</span>
+          <span style="font-weight: 600;">NEXUS-RCA</span>
+        </div>
+        <div>
+          <span class="changelog-tag tag-new">New</span>
+          <span class="changelog-tag tag-deprecated">Deprecated</span>
+        </div>
+        <ul class="changelog-list">
+          <li><strong>Gemini Integration:</strong> Added Google Gemini as the 4th LLM in consensus engine</li>
+          <li>New ML pipeline for anomaly detection</li>
+          <li>Deprecated legacy v1 API (will be removed in v3.0)</li>
+          <li>Updated documentation with new API examples</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <button class="btn btn-secondary btn-lg">Load More Updates</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container" style="max-width: 600px; text-align: center;">
+      <h2>Get Update Notifications</h2>
+      <p style="color: var(--gray-600); margin-bottom: 2rem;">Subscribe to receive email notifications when we release new features.</p>
+      <form style="display: flex; gap: 1rem;">
+        <input type="email" placeholder="Enter your email" style="flex: 1; padding: 0.875rem 1rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 1rem;">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="products.html">All Products</a>
+            <a href="../products/nexus-rca.html">NEXUS-RCA</a>
+            <a href="../products/synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="careers.html">Careers</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

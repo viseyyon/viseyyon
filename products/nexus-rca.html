@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXUS-RCA Enterprise - Multi-agent AI root cause analysis with 5 LLM consensus engine. 94%+ accuracy for complex system failures.">
+  <title>NEXUS-RCA Enterprise | AI-Powered Root Cause Analysis | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #4c1d95 100%); color: white; position: relative; overflow: hidden; }
+    .product-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .code-block { background: #0f172a; border-radius: 12px; padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; overflow-x: auto; }
+    .code-block .comment { color: #64748b; }
+    .code-block .keyword { color: #38bdf8; }
+    .code-block .string { color: #34d399; }
+    .code-block .number { color: #fbbf24; }
+    .llm-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; }
+    .architecture-card { background: var(--white); border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200); height: 100%; }
+    .metric-card { background: linear-gradient(135deg, var(--gray-50), var(--white)); border-radius: var(--radius-xl); padding: 2rem; text-align: center; border: 1px solid var(--gray-200); }
+    .metric-value { font-size: 3rem; font-weight: 800; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <span style="width: 8px; height: 8px; background: #34d399; border-radius: 50%;"></span>
+            Enterprise DevOps
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            NEXUS-RCA<br><span style="opacity: 0.8;">Enterprise</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.7;">
+            Multi-agent AI root cause analysis powered by 5 LLM consensus engine. Identify complex system failures with 94%+ accuracy in minutes, not hours.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="../pages/demo.html" class="btn btn-white btn-lg">Request Demo</a>
+            <a href="../pages/contact.html" class="btn btn-outline-white btn-lg">Contact Sales</a>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span class="llm-badge" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd;">Claude Opus</span>
+            <span class="llm-badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7;">GPT-4</span>
+            <span class="llm-badge" style="background: rgba(251, 191, 36, 0.2); color: #fcd34d;">Gemini</span>
+            <span class="llm-badge" style="background: rgba(236, 72, 153, 0.2); color: #f9a8d4;">Azure GPT-4o</span>
+            <span class="llm-badge" style="background: rgba(139, 92, 246, 0.2); color: #c4b5fd;">Grok 2.0</span>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.2);">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <div style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%;"></div>
+              <div style="width: 12px; height: 12px; background: #fbbf24; border-radius: 50%;"></div>
+              <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 50%;"></div>
+              <span style="margin-left: auto; font-size: 0.75rem; opacity: 0.7;">nexus-rca-cli</span>
+            </div>
+            <div class="code-block" style="margin: 0;">
+              <div><span class="comment"># Analyze kernel panic from JIRA ticket</span></div>
+              <div style="margin-top: 0.5rem;"><span class="keyword">$</span> nexus-rca analyze --ticket CPEHTMP-3183</div>
+              <div style="margin-top: 1rem; color: #64748b;">Initializing 5-agent consensus...</div>
+              <div style="color: #22c55e;">Claude Opus: Analyzing kernel dump...</div>
+              <div style="color: #22c55e;">GPT-4: Cross-referencing symbols...</div>
+              <div style="color: #22c55e;">Gemini: Pattern matching...</div>
+              <div style="margin-top: 1rem; color: #fbbf24;">Root Cause Identified:</div>
+              <div style="color: #f8fafc;">Memory leak in wifi_hal.c:1247</div>
+              <div style="color: #f8fafc;">Confidence: <span class="number">94.7%</span></div>
+              <div style="color: #f8fafc;">Consensus: <span class="number">5/5</span> agents agree</div>
+              <div style="margin-top: 1rem; color: #38bdf8;">Fix generated: wifi_hal_fix.patch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section class="section-sm" style="background: var(--white); margin-top: -40px; position: relative; z-index: 10;">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 1.5rem;">
+        <div class="metric-card">
+          <div class="metric-value">94.7%</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Accuracy Rate</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">60%</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Faster Resolution</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">5</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">LLM Consensus</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">$5M+</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Annual Savings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Powerful Capabilities</h2>
+        <p>Everything you need for enterprise-grade root cause analysis</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 2rem;">
+        <div class="architecture-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>5-LLM Consensus Engine</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Combines Claude Opus, GPT-4, Gemini, Azure GPT-4o, and Grok 2.0 with weighted voting for maximum accuracy. Each agent specializes in different analysis aspects.
+          </p>
+        </div>
+
+        <div class="architecture-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </div>
+          <h3>Kernel Symbol Resolution</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Automatically resolves kernel addresses to function names using vmlinux, System.map, and kallsyms. Process 3,300+ addresses per second.
+          </p>
+        </div>
+
+        <div class="architecture-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #10b981, #047857); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+          <h3>Gerrit Integration</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Deep integration with Gerrit code review. Automatically correlates code changes with failures and suggests relevant patches.
+          </p>
+        </div>
+
+        <div class="architecture-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Multi-Project Support</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Support unlimited projects without code changes. 9 project types, 10 component types, and 15 pre-configured enterprise templates.
+          </p>
+        </div>
+
+        <div class="architecture-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #ec4899, #be185d); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Network Diagnostics</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Specialized WiFi and network failure analysis. Vendor-specific known issues database for Broadcom, Intel, Qualcomm, and more.
+          </p>
+        </div>
+
+        <div class="architecture-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #0ea5e9, #0284c7); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3>ML Pipeline</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Anomaly detection, pattern recognition, clustering, and predictive analysis. Process 12,500+ events per second with Z-score and isolation forest algorithms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Multi-Agent Architecture</h2>
+        <p>How NEXUS-RCA achieves 94%+ accuracy</p>
+      </div>
+
+      <div style="background: var(--gray-50); border-radius: var(--radius-2xl); padding: 3rem; border: 1px solid var(--gray-200);">
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 2rem;">
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg); border: 2px solid #3b82f6;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+            <div style="font-weight: 700; color: #1d4ed8;">Analyst</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500);">Claude Opus</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.5rem;">Deep reasoning</div>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg); border: 2px solid #10b981;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💻</div>
+            <div style="font-weight: 700; color: #047857;">CodeExpert</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500);">GPT-4</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.5rem;">Code analysis</div>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg); border: 2px solid #f59e0b;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧩</div>
+            <div style="font-weight: 700; color: #d97706;">Synthesizer</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500);">Gemini</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.5rem;">Long context</div>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg); border: 2px solid #ec4899;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+            <div style="font-weight: 700; color: #be185d;">Validator</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500);">Azure GPT-4o</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.5rem;">Verification</div>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg); border: 2px solid #8b5cf6;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+            <div style="font-weight: 700; color: #6d28d9;">Accelerator</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500);">Grok 2.0</div>
+            <div style="font-size: 0.75rem; color: var(--gray-500); margin-top: 0.5rem;">Rapid triage</div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin: 2rem 0;">
+          <svg width="40" height="40" fill="var(--gray-400)"><path d="M20 30V10M10 20l10 10 10-10"/></svg>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg);">
+            <div style="font-weight: 700; margin-bottom: 0.5rem;">ML Pipeline</div>
+            <div style="font-size: 0.875rem; color: var(--gray-500);">Anomaly detection, clustering, pattern recognition</div>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); border-radius: var(--radius-lg); color: white;">
+            <div style="font-weight: 700; margin-bottom: 0.5rem;">Consensus Engine</div>
+            <div style="font-size: 0.875rem; opacity: 0.9;">Weighted voting & confidence scoring</div>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg);">
+            <div style="font-weight: 700; margin-bottom: 0.5rem;">Report Generator</div>
+            <div style="font-size: 0.875rem; color: var(--gray-500);">Markdown, JSON, HTML outputs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Built for Real-World Challenges</h2>
+        <p>NEXUS-RCA handles the toughest problems</p>
+      </div>
+
+      <div class="grid grid-2" style="gap: 2rem;">
+        <div class="architecture-card">
+          <h3 style="margin-bottom: 1rem;">Kernel Panics & Crashes</h3>
+          <p style="color: var(--gray-600); margin-bottom: 1rem;">Automatically analyze kernel dumps, resolve symbols, and identify root causes in kernel and driver code.</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">Linux Kernel</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">RDK</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">OpenWRT</span>
+          </div>
+        </div>
+
+        <div class="architecture-card">
+          <h3 style="margin-bottom: 1rem;">Build Failures</h3>
+          <p style="color: var(--gray-600); margin-bottom: 1rem;">Analyze CI/CD build failures across Jenkins, GitHub Actions, and GitLab. Identify patterns and suggest fixes.</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">Jenkins</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">GitHub Actions</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">GitLab CI</span>
+          </div>
+        </div>
+
+        <div class="architecture-card">
+          <h3 style="margin-bottom: 1rem;">Network Issues</h3>
+          <p style="color: var(--gray-600); margin-bottom: 1rem;">Specialized analysis for WiFi connectivity failures, HAL issues, and network stack problems with vendor-specific knowledge.</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">WiFi HAL</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">Broadcom</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">Intel</span>
+          </div>
+        </div>
+
+        <div class="architecture-card">
+          <h3 style="margin-bottom: 1rem;">Performance Regressions</h3>
+          <p style="color: var(--gray-600); margin-bottom: 1rem;">Detect and analyze performance degradation using statistical methods and historical comparison.</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">Memory Leaks</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">CPU Spikes</span>
+            <span style="background: var(--gray-100); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">Latency</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Enterprise Pricing</h2>
+        <p>Flexible plans for teams of all sizes</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div class="pricing-card">
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Team</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">$149<span style="font-size: 1rem; font-weight: 400; color: var(--gray-500);">/mo</span></div>
+            <div style="color: var(--gray-500); font-size: 0.875rem;">Up to 5 users</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              100 analyses/month
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              3 LLM agents
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              JIRA integration
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Email support
+            </li>
+          </ul>
+          <a href="../pages/signup.html?product=nexus-rca&plan=team" class="btn btn-secondary" style="width: 100%;">Start Trial</a>
+        </div>
+
+        <div class="pricing-card" style="border: 2px solid var(--primary); position: relative;">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary-gradient); color: white; padding: 0.25rem 1rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">Most Popular</div>
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Business</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">$499<span style="font-size: 1rem; font-weight: 400; color: var(--gray-500);">/mo</span></div>
+            <div style="color: var(--gray-500); font-size: 0.875rem;">Up to 20 users</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <strong>Unlimited</strong> analyses
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <strong>5 LLM agents</strong>
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Gerrit + JIRA integration
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Priority support
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              API access
+            </li>
+          </ul>
+          <a href="../pages/signup.html?product=nexus-rca&plan=business" class="btn btn-primary" style="width: 100%;">Start Trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Enterprise</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">Custom</div>
+            <div style="color: var(--gray-500); font-size: 0.875rem;">Unlimited users</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Everything in Business
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              On-premise deployment
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Custom integrations
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              24/7 dedicated support
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#10b981"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              SLA guarantees
+            </li>
+          </ul>
+          <a href="../pages/contact.html?product=nexus-rca" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Ready to Transform Your RCA Process?</h2>
+      <p>See NEXUS-RCA in action with a personalized demo.</p>
+      <div class="cta-buttons">
+        <a href="../pages/demo.html?product=nexus-rca" class="btn btn-white btn-lg">Request Demo</a>
+        <a href="../pages/contact.html" class="btn btn-outline-white btn-lg">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="../pages/products.html">All Products</a>
+            <a href="nexus-rca.html">NEXUS-RCA</a>
+            <a href="synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="../pages/about.html">About</a>
+            <a href="../pages/contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="../pages/privacy.html">Privacy</a>
+            <a href="../pages/terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

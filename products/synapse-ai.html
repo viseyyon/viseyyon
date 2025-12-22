@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SYNAPSE AI Suite - Self-evolving prompt engineering platform with 54+ techniques. RAG-enhanced generation optimized for Claude Opus 4.5.">
+  <title>SYNAPSE AI Suite | Prompt Engineering Platform | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%); color: white; position: relative; overflow: hidden; }
+    .technique-card { background: var(--white); border-radius: var(--radius-lg); padding: 1.25rem; border: 1px solid var(--gray-200); transition: var(--transition-base); }
+    .technique-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); }
+    .category-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo"><img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;"></a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <span style="width: 8px; height: 8px; background: #34d399; border-radius: 50%;"></span>
+            AI/ML Platform
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            SYNAPSE AI<br><span style="opacity: 0.8;">Suite</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.7;">
+            Self-evolving prompt engineering platform with 54+ techniques. RAG-enhanced generation optimized for Claude Opus 4.5 and all major LLMs.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="../pages/demo.html" class="btn btn-white btn-lg">Try Free</a>
+            <a href="../pages/contact.html" class="btn btn-outline-white btn-lg">Enterprise Demo</a>
+          </div>
+          <div style="display: flex; gap: 2rem;">
+            <div><div style="font-size: 2rem; font-weight: 800;">54+</div><div style="font-size: 0.875rem; opacity: 0.8;">Techniques</div></div>
+            <div><div style="font-size: 2rem; font-weight: 800;">12</div><div style="font-size: 0.875rem; opacity: 0.8;">Categories</div></div>
+            <div><div style="font-size: 2rem; font-weight: 800;">Self</div><div style="font-size: 0.875rem; opacity: 0.8;">Evolving</div></div>
+          </div>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Technique Categories</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Zero-Shot</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Few-Shot</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Chain-of-Thought</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Tree of Thoughts</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">ReAct</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Self-Consistency</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">RAG-Enhanced</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Structured Output</div>
+            <div style="background: rgba(59,130,246,0.3); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Polly-Derived</div>
+            <div style="background: rgba(16,185,129,0.3); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;">Dec 2025 Research</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why SYNAPSE AI?</h2>
+        <p>The most comprehensive prompt engineering platform available</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 2rem;">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+          </div>
+          <h3>54+ Prompting Techniques</h3>
+          <p style="color: var(--gray-600);">The deepest library of AI prompting methods including Polly-derived techniques and December 2025 research integrations.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>Self-Evolving System</h3>
+          <p style="color: var(--gray-600);">Learns from feedback and automatically optimizes prompts. Technique weights evolve based on real-world performance.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>RAG-Enhanced</h3>
+          <p style="color: var(--gray-600);">Built-in RAG integration with ChromaDB support. Techniques are persisted and retrieved for optimal context.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #047857);">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3>Multi-Model Optimization</h3>
+          <p style="color: var(--gray-600);">Optimized for Claude Opus 4.5, GPT-4, GPT-3.5 Turbo, and more. Model-specific technique recommendations.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Task Classification</h3>
+          <p style="color: var(--gray-600);">Automatic classification into 8 categories with complexity assessment from Simple to Complex.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #0ea5e9, #0284c7);">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+          </div>
+          <h3>Pre-Built Chains</h3>
+          <p style="color: var(--gray-600);">Ready-to-use technique chains for common use cases. DevOps FPR demo included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technique Library -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>54+ Prompting Techniques</h2>
+        <p>The most comprehensive library in the industry</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+        <!-- Core Techniques -->
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dbeafe; color: #1d4ed8;">Core</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">Zero-Shot</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Direct prompting without examples</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dbeafe; color: #1d4ed8;">Core</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">Few-Shot</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Learning from examples</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dbeafe; color: #1d4ed8;">Core</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">Chain-of-Thought</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Step-by-step reasoning</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dbeafe; color: #1d4ed8;">Core</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">Tree of Thoughts</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Branching exploration</p>
+        </div>
+
+        <!-- Advanced Techniques -->
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dcfce7; color: #166534;">Advanced</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">ReAct</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Reasoning + Acting</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dcfce7; color: #166534;">Advanced</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">Self-Consistency</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Multiple path voting</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dcfce7; color: #166534;">Advanced</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">RAG-Enhanced</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Retrieval augmentation</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #dcfce7; color: #166534;">Advanced</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">Structured Output</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">JSON/XML formatting</p>
+        </div>
+
+        <!-- Polly-Derived -->
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fae8ff; color: #a21caf;">Polly</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">HTA</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Hierarchical Trace Analysis</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fae8ff; color: #a21caf;">Polly</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">FPR</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Failure Pattern Recognition</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fae8ff; color: #a21caf;">Polly</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">NL2Config</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Natural Language to Config</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fae8ff; color: #a21caf;">Polly</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">BDD</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Behavioral Drift Detection</p>
+        </div>
+
+        <!-- Research 2025 -->
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fef3c7; color: #92400e;">Research</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">OPRO</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Optimization by Prompting</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fef3c7; color: #92400e;">Research</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">PE2</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Prompt Engineering v2</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fef3c7; color: #92400e;">Research</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">LDB</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">LLM Debugger</p>
+        </div>
+        <div class="technique-card">
+          <span class="category-badge" style="background: #fef3c7; color: #92400e;">Research</span>
+          <h4 style="margin: 0.75rem 0 0.25rem; font-size: 0.95rem;">SPO</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-500); margin: 0;">Self-Play Optimization</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <p style="color: var(--gray-500);">+ 38 more techniques across 12 categories</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple Pricing</h2>
+        <p>Start free, scale as you grow</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div class="pricing-card">
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Free</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">$0<span style="font-size: 1rem; font-weight: 400; color: var(--gray-500);">/forever</span></div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;">20 techniques</li>
+            <li style="padding: 0.5rem 0;">100 prompts/month</li>
+            <li style="padding: 0.5rem 0;">Basic analytics</li>
+            <li style="padding: 0.5rem 0;">Community support</li>
+          </ul>
+          <a href="../pages/signup.html?product=synapse" class="btn btn-secondary" style="width: 100%;">Get Started Free</a>
+        </div>
+
+        <div class="pricing-card" style="border: 2px solid var(--primary); position: relative;">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary-gradient); color: white; padding: 0.25rem 1rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">Popular</div>
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Pro</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">$49<span style="font-size: 1rem; font-weight: 400; color: var(--gray-500);">/mo</span></div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;"><strong>All 54+ techniques</strong></li>
+            <li style="padding: 0.5rem 0;">Unlimited prompts</li>
+            <li style="padding: 0.5rem 0;">Self-evolving system</li>
+            <li style="padding: 0.5rem 0;">RAG integration</li>
+            <li style="padding: 0.5rem 0;">Priority support</li>
+          </ul>
+          <a href="../pages/signup.html?product=synapse&plan=pro" class="btn btn-primary" style="width: 100%;">Start Trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Enterprise</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">Custom</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0;">Everything in Pro</li>
+            <li style="padding: 0.5rem 0;">Custom techniques</li>
+            <li style="padding: 0.5rem 0;">On-premise option</li>
+            <li style="padding: 0.5rem 0;">SSO & SCIM</li>
+            <li style="padding: 0.5rem 0;">Dedicated support</li>
+          </ul>
+          <a href="../pages/contact.html?product=synapse" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%);">
+    <div class="container">
+      <h2>Ready to Master Prompt Engineering?</h2>
+      <p>Start using 54+ techniques today. Free forever plan available.</p>
+      <div class="cta-buttons">
+        <a href="../pages/signup.html?product=synapse" class="btn btn-white btn-lg">Get Started Free</a>
+        <a href="../pages/demo.html" class="btn btn-outline-white btn-lg">See Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;"></div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="../pages/products.html">All Products</a>
+            <a href="nexus-rca.html">NEXUS-RCA</a>
+            <a href="synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="../pages/about.html">About</a>
+            <a href="../pages/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Viseyyon Technologies.</p></div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

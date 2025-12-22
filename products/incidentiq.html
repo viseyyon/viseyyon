@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IncidentIQ - AI-powered incident management for SMBs. Detect, diagnose, and resolve IT incidents faster with intelligent automation.">
+  <title>IncidentIQ | AI Incident Management | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%); color: white; position: relative; overflow: hidden; }
+    .incident-card { background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem; border-left: 4px solid; }
+    .incident-card.critical { border-color: #dc2626; }
+    .incident-card.warning { border-color: #f59e0b; }
+    .incident-card.resolved { border-color: #22c55e; }
+    .status-badge { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.625rem; font-weight: 600; text-transform: uppercase; }
+    .timeline-item { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--gray-100); }
+    .timeline-dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 0.25rem; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+            IT Operations
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            IncidentIQ<br><span style="opacity: 0.8;">Resolve Faster</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.7;">
+            AI-powered incident management that detects issues before users report them, diagnoses root causes automatically, and suggests fixes in real-time.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="../pages/signup.html" class="btn btn-white btn-lg">Start Free Trial</a>
+            <a href="../pages/demo.html" class="btn btn-outline-white btn-lg">Watch Demo</a>
+          </div>
+          <div style="display: flex; gap: 2rem; font-size: 0.9375rem;">
+            <div><span style="font-weight: 700; font-size: 1.5rem;">73%</span><br><span style="opacity: 0.8;">Faster resolution</span></div>
+            <div><span style="font-weight: 700; font-size: 1.5rem;">45%</span><br><span style="opacity: 0.8;">Less downtime</span></div>
+            <div><span style="font-weight: 700; font-size: 1.5rem;">24/7</span><br><span style="opacity: 0.8;">Monitoring</span></div>
+          </div>
+        </div>
+        <div>
+          <div style="background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 25px 60px rgba(0,0,0,0.2);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <h3 style="color: var(--gray-900); font-size: 1rem;">Active Incidents</h3>
+              <span style="background: #fef2f2; color: #dc2626; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">3 Open</span>
+            </div>
+            <div class="incident-card critical">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                <div>
+                  <div style="font-weight: 600; font-size: 0.875rem; color: var(--gray-800);">Database Connection Timeout</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">prod-db-01  Started 12 min ago</div>
+                </div>
+                <span class="status-badge" style="background: #fef2f2; color: #dc2626;">Critical</span>
+              </div>
+              <div style="background: #fef2f2; border-radius: 0.5rem; padding: 0.75rem; margin-top: 0.5rem;">
+                <div style="font-size: 0.6875rem; color: #dc2626; font-weight: 600; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.25rem;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
+                  AI Diagnosis
+                </div>
+                <div style="font-size: 0.75rem; color: #991b1b;">Connection pool exhausted. Likely cause: long-running queries from report-service.</div>
+              </div>
+            </div>
+            <div class="incident-card warning">
+              <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                  <div style="font-weight: 600; font-size: 0.875rem; color: var(--gray-800);">High CPU Usage</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">api-server-03  87% utilization</div>
+                </div>
+                <span class="status-badge" style="background: #fef3c7; color: #d97706;">Warning</span>
+              </div>
+            </div>
+            <div class="incident-card resolved">
+              <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                  <div style="font-weight: 600; font-size: 0.875rem; color: var(--gray-800);">SSL Certificate Expiry</div>
+                  <div style="font-size: 0.75rem; color: var(--gray-500);">Auto-renewed 2h ago</div>
+                </div>
+                <span class="status-badge" style="background: #dcfce7; color: #16a34a;">Resolved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section style="padding: 100px 0; background: var(--gray-50);">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">AI That Keeps You Running</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600);">From detection to resolution, IncidentIQ handles it all.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fee2e2, #fecaca); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Anomaly Detection</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">ML models learn your system's normal behavior. Get alerted to anomalies before they become incidents.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #dbeafe, #bfdbfe); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Auto Diagnosis</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">AI analyzes logs, metrics, and traces to identify root cause. No more hours of manual investigation.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #dcfce7, #bbf7d0); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Smart Remediation</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Suggested fixes based on historical data. One-click automated remediation for common issues.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">On-Call Management</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">Smart escalation based on expertise and availability. Automatic rotation and coverage tracking.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Incident Analytics</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">MTTR trends, incident patterns, and reliability metrics. Data-driven insights for improvement.</p>
+        </div>
+        <div style="background: white; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200);">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #e0e7ff, #c7d2fe); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Postmortems</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">AI-generated incident reports with timeline, impact analysis, and prevention recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Connects to Your Stack</h2>
+          <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem; line-height: 1.7;">Integrates with monitoring tools, log aggregators, and communication platforms you already use.</p>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">Datadog</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">PagerDuty</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">Splunk</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">Slack</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">AWS</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">Jira</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">Grafana</div>
+            <div style="background: var(--gray-50); padding: 1rem; border-radius: 0.75rem; text-align: center; font-weight: 500; font-size: 0.8125rem;">New Relic</div>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, #dc2626, #ef4444); border-radius: 1.5rem; padding: 2rem; color: white;">
+          <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem;">Resolution Timeline</h3>
+          <div style="background: rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem;">
+            <div class="timeline-item" style="border-color: rgba(255,255,255,0.2);">
+              <div class="timeline-dot" style="background: #fca5a5;"></div>
+              <div style="flex: 1;">
+                <div style="font-size: 0.8125rem; font-weight: 600;">Incident Detected</div>
+                <div style="font-size: 0.6875rem; opacity: 0.7;">Database latency exceeded threshold</div>
+              </div>
+              <div style="font-size: 0.6875rem; opacity: 0.7;">0:00</div>
+            </div>
+            <div class="timeline-item" style="border-color: rgba(255,255,255,0.2);">
+              <div class="timeline-dot" style="background: #fcd34d;"></div>
+              <div style="flex: 1;">
+                <div style="font-size: 0.8125rem; font-weight: 600;">Root Cause Identified</div>
+                <div style="font-size: 0.6875rem; opacity: 0.7;">Connection pool exhaustion</div>
+              </div>
+              <div style="font-size: 0.6875rem; opacity: 0.7;">0:02</div>
+            </div>
+            <div class="timeline-item" style="border-color: rgba(255,255,255,0.2);">
+              <div class="timeline-dot" style="background: #86efac;"></div>
+              <div style="flex: 1;">
+                <div style="font-size: 0.8125rem; font-weight: 600;">Fix Applied</div>
+                <div style="font-size: 0.6875rem; opacity: 0.7;">Pool size increased automatically</div>
+              </div>
+              <div style="font-size: 0.6875rem; opacity: 0.7;">0:05</div>
+            </div>
+            <div class="timeline-item" style="border-bottom: none;">
+              <div class="timeline-dot" style="background: #22c55e;"></div>
+              <div style="flex: 1;">
+                <div style="font-size: 0.8125rem; font-weight: 600;">Resolved</div>
+                <div style="font-size: 0.6875rem; opacity: 0.7;">All systems normal</div>
+              </div>
+              <div style="font-size: 0.6875rem; opacity: 0.7;">0:07</div>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 1rem; font-size: 0.8125rem; opacity: 0.8;">Total Resolution Time: 7 minutes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section style="padding: 100px 0; background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">SMB-Friendly Pricing</h2>
+        <p style="font-size: 1.125rem; opacity: 0.9;">Enterprise features at prices small teams can afford.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Starter</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem; margin-bottom: 1.5rem;">For small teams</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$79<span style="font-size: 1rem; font-weight: 500; opacity: 0.7;">/mo</span></div>
+          <p style="opacity: 0.7; font-size: 0.875rem; margin-bottom: 2rem;">Up to 10 services</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic monitoring</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Alert routing</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 7-day retention</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Email support</li>
+          </ul>
+          <a href="../pages/signup.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Start Free Trial</a>
+        </div>
+        <div style="background: white; color: var(--gray-900); border-radius: 1rem; padding: 2rem; position: relative; transform: scale(1.05);">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 0.25rem 1rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600;">MOST POPULAR</div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Growth</h3>
+          <p style="color: var(--gray-600); font-size: 0.875rem; margin-bottom: 1.5rem;">For growing teams</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$199<span style="font-size: 1rem; font-weight: 500; color: var(--gray-500);">/mo</span></div>
+          <p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 2rem;">Up to 50 services</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> AI diagnosis</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Auto-remediation</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 30-day retention</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem; color: var(--gray-700);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority support</li>
+          </ul>
+          <a href="../pages/signup.html" class="btn btn-primary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #dc2626, #ef4444);">Start Free Trial</a>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; border: 1px solid rgba(255,255,255,0.2);">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Scale</h3>
+          <p style="opacity: 0.8; font-size: 0.875rem; margin-bottom: 1.5rem;">For larger operations</p>
+          <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">$499<span style="font-size: 1rem; font-weight: 500; opacity: 0.7;">/mo</span></div>
+          <p style="opacity: 0.7; font-size: 0.875rem; margin-bottom: 2rem;">Unlimited services</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Everything in Growth</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom integrations</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-year retention</li>
+            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9375rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dedicated CSM</li>
+          </ul>
+          <a href="../pages/contact.html" class="btn btn-outline-white" style="width: 100%; justify-content: center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Stop Fighting Fires, Start Preventing Them</h2>
+        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">Join 2,000+ teams resolving incidents faster with AI.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+          <a href="../pages/signup.html" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #dc2626, #ef4444);">Start Free Trial</a>
+          <a href="../pages/demo.html" class="btn btn-outline btn-lg">Watch Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" style="margin-bottom: 1rem;">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </a>
+          <p style="color: var(--gray-400); margin-bottom: 1.5rem;">Enterprise AI solutions for modern teams. Building the future of intelligent automation.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Products</h4>
+          <a href="nexus-rca.html">NEXUS-RCA</a>
+          <a href="synapse-ai.html">SYNAPSE AI</a>
+          <a href="keyguardian.html">KeyGuardian</a>
+          <a href="incidentiq.html">IncidentIQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/careers.html">Careers</a>
+          <a href="../pages/contact.html">Contact</a>
+          <a href="../pages/blog.html">Blog</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="../pages/privacy.html">Privacy Policy</a>
+          <a href="../pages/terms.html">Terms of Service</a>
+          <a href="../pages/security.html">Security</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

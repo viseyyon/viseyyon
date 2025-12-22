@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IssueIQ - AI-powered JIRA and Microsoft Teams integration for smart ticket management, automated workflows, and team productivity.">
+  <title>IssueIQ | Smart Ticket Management | Viseyyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .product-hero { padding: 140px 0 80px; background: linear-gradient(135deg, #0052cc 0%, #2684ff 50%, #4c9aff 100%); color: white; position: relative; overflow: hidden; }
+    .product-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .integration-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; background: rgba(255,255,255,0.1); }
+    .feature-card { background: var(--white); border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--gray-200); height: 100%; }
+    .metric-card { background: linear-gradient(135deg, var(--gray-50), var(--white)); border-radius: var(--radius-xl); padding: 2rem; text-align: center; border: 1px solid var(--gray-200); }
+    .metric-value { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #0052cc, #2684ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .workflow-step { display: flex; gap: 1.5rem; padding: 1.5rem; background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); }
+    .workflow-number { width: 40px; height: 40px; background: linear-gradient(135deg, #0052cc, #2684ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="../pages/products.html" class="nav-link">Products</a>
+        <a href="../pages/solutions.html" class="nav-link">Solutions</a>
+        <a href="../pages/pricing.html" class="nav-link">Pricing</a>
+        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../pages/demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="../pages/signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Product Hero -->
+  <section class="product-hero">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; margin-bottom: 1.5rem;">
+            <span style="width: 8px; height: 8px; background: #36b37e; border-radius: 50%;"></span>
+            DevOps & Productivity
+          </div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+            IssueIQ<br><span style="opacity: 0.8;">Smart Ticket Management</span>
+          </h1>
+          <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.7;">
+            AI-powered integration between JIRA and Microsoft Teams. Smart ticket management, automated workflows, and intelligent insights that boost team productivity by 40%.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="../pages/demo.html?product=jira-intelligence" class="btn btn-white btn-lg">Request Demo</a>
+            <a href="../pages/signup.html?product=jira-intelligence" class="btn btn-outline-white btn-lg">Start Free Trial</a>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span class="integration-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 11.513H0V2.924A2.93 2.93 0 0 1 2.924 0h8.647v11.513zm0 9.563H0v-8.59h11.571v8.59zM24 11.513H12.429V0h8.647A2.93 2.93 0 0 1 24 2.924v8.589zm0 9.563a2.93 2.93 0 0 1-2.924 2.924h-8.647v-11.513H24V21.076z"/></svg>
+              JIRA Cloud & Server
+            </span>
+            <span class="integration-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12L18.343 2H5.657L0 12l5.657 10h12.686L24 12zm-8.657 6H8.657L5.314 12l3.343-6h6.686l3.343 6-3.343 6z"/></svg>
+              Microsoft Teams
+            </span>
+            <span class="integration-badge">
+              <svg width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Slack
+            </span>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.2);">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <div style="width: 32px; height: 32px; background: #0052cc; border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+                <svg width="16" height="16" fill="white"><path d="M11.571 11.513H0V2.924A2.93 2.93 0 0 1 2.924 0h8.647v11.513z"/></svg>
+              </div>
+              <span style="font-weight: 600;">IssueIQ Bot</span>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+              <div style="font-size: 0.875rem; opacity: 0.8; margin-bottom: 0.5rem;">New ticket created:</div>
+              <div style="font-weight: 600;">DEVOPS-1234: API timeout in production</div>
+              <div style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">Priority: High | Assignee: @john</div>
+            </div>
+            <div style="background: rgba(54, 179, 126, 0.2); border-radius: 8px; padding: 1rem; border-left: 3px solid #36b37e;">
+              <div style="font-size: 0.875rem; font-weight: 600; color: #36b37e; margin-bottom: 0.5rem;">AI Analysis</div>
+              <div style="font-size: 0.875rem;">Similar to DEVOPS-987 (resolved). Suggested fix: Increase timeout threshold in config.yaml line 47.</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+              <button style="flex: 1; padding: 0.5rem; border-radius: 6px; border: none; background: #36b37e; color: white; font-weight: 500; cursor: pointer;">Apply Fix</button>
+              <button style="flex: 1; padding: 0.5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.3); background: transparent; color: white; font-weight: 500; cursor: pointer;">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section class="section-sm" style="background: var(--white); margin-top: -40px; position: relative; z-index: 10;">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 1.5rem;">
+        <div class="metric-card">
+          <div class="metric-value">40%</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Productivity Increase</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">65%</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Faster Resolution</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">90%</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Auto-Classification</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">24/7</div>
+          <div style="color: var(--gray-600); margin-top: 0.5rem;">Smart Monitoring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Powerful Features</h2>
+        <p>Everything you need to supercharge your JIRA workflow</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 2rem;">
+        <div class="feature-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #0052cc, #2684ff); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Smart Notifications</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            AI-powered notifications that understand context and priority. Get notified in Teams only when it matters, with relevant context and suggested actions.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #36b37e, #00875a); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Auto-Classification</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Automatically categorize, prioritize, and assign tickets based on content analysis. Machine learning models trained on your historical data.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #ff5630, #de350b); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+          <h3>Duplicate Detection</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            AI detects duplicate and related tickets before you create them. Link similar issues and learn from past resolutions automatically.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #6554c0, #403294); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>SLA Monitoring</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Real-time SLA tracking with predictive alerts. Get warned before breaches happen and automatically escalate when needed.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #ffab00, #ff8b00); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3>Analytics Dashboard</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Beautiful dashboards showing team performance, ticket trends, and bottlenecks. Customizable reports and export to Excel.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #00b8d9, #00a3bf); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Team Workload</h3>
+          <p style="color: var(--gray-600); line-height: 1.7;">
+            Visualize team capacity and workload distribution. Smart assignment suggestions based on skills and availability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Seamless integration in three simple steps</p>
+      </div>
+
+      <div style="max-width: 700px; margin: 0 auto;">
+        <div class="workflow-step" style="margin-bottom: 1rem;">
+          <div class="workflow-number">1</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">Connect Your Tools</h4>
+            <p style="color: var(--gray-600); margin: 0;">Install our app in Microsoft Teams and connect your JIRA instance. OAuth-based authentication takes less than 2 minutes.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step" style="margin-bottom: 1rem;">
+          <div class="workflow-number">2</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">Configure Your Workflows</h4>
+            <p style="color: var(--gray-600); margin: 0;">Set up notification rules, auto-assignment criteria, and channel mappings. Our AI learns from your preferences.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-number">3</div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">Watch Productivity Soar</h4>
+            <p style="color: var(--gray-600); margin: 0;">Teams receive smart notifications, can update tickets without leaving chat, and get AI-powered suggestions for faster resolution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Deep Integrations</h2>
+        <p>Works with your entire toolchain</p>
+      </div>
+
+      <div class="grid grid-4" style="gap: 1.5rem;">
+        <div style="background: var(--white); border-radius: var(--radius-xl); padding: 2rem; text-align: center; border: 1px solid var(--gray-200);">
+          <div style="width: 64px; height: 64px; background: #0052cc; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M11.571 11.513H0V2.924A2.93 2.93 0 0 1 2.924 0h8.647v11.513zm0 9.563H0v-8.59h11.571v8.59zM24 11.513H12.429V0h8.647A2.93 2.93 0 0 1 24 2.924v8.589z"/></svg>
+          </div>
+          <h4>JIRA</h4>
+          <p style="color: var(--gray-500); font-size: 0.875rem;">Cloud & Server</p>
+        </div>
+
+        <div style="background: var(--white); border-radius: var(--radius-xl); padding: 2rem; text-align: center; border: 1px solid var(--gray-200);">
+          <div style="width: 64px; height: 64px; background: #5059c9; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M24 12L18.343 2H5.657L0 12l5.657 10h12.686L24 12z"/></svg>
+          </div>
+          <h4>Microsoft Teams</h4>
+          <p style="color: var(--gray-500); font-size: 0.875rem;">Native App</p>
+        </div>
+
+        <div style="background: var(--white); border-radius: var(--radius-xl); padding: 2rem; text-align: center; border: 1px solid var(--gray-200);">
+          <div style="width: 64px; height: 64px; background: #4a154b; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/></svg>
+          </div>
+          <h4>Slack</h4>
+          <p style="color: var(--gray-500); font-size: 0.875rem;">Full Support</p>
+        </div>
+
+        <div style="background: var(--white); border-radius: var(--radius-xl); padding: 2rem; text-align: center; border: 1px solid var(--gray-200);">
+          <div style="width: 64px; height: 64px; background: #00b4ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.18 1.897-.962 6.502-1.36 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.15-.056-.212s-.174-.041-.248-.024c-.106.024-1.793 1.14-5.062 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14.12.1.153.232.166.33.013.098.03.32.017.493z"/></svg>
+          </div>
+          <h4>Confluence</h4>
+          <p style="color: var(--gray-500); font-size: 0.875rem;">Wiki Links</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple Pricing</h2>
+        <p>Plans that scale with your team</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div class="pricing-card">
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Team</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">$49<span style="font-size: 1rem; font-weight: 400; color: var(--gray-500);">/mo</span></div>
+            <div style="color: var(--gray-500); font-size: 0.875rem;">Up to 10 users</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Smart notifications
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Basic auto-classification
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Teams integration
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Email support
+            </li>
+          </ul>
+          <a href="../pages/signup.html?product=jira-intelligence&plan=team" class="btn btn-secondary" style="width: 100%;">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card" style="border: 2px solid var(--primary); position: relative;">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #0052cc, #2684ff); color: white; padding: 0.25rem 1rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">Most Popular</div>
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Business</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">$149<span style="font-size: 1rem; font-weight: 400; color: var(--gray-500);">/mo</span></div>
+            <div style="color: var(--gray-500); font-size: 0.875rem;">Up to 50 users</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Everything in Team
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <strong>AI-powered insights</strong>
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Duplicate detection
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Analytics dashboard
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Priority support
+            </li>
+          </ul>
+          <a href="../pages/signup.html?product=jira-intelligence&plan=business" class="btn btn-primary" style="width: 100%;">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <div style="text-align: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gray-200); margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem;">Enterprise</div>
+            <div style="font-size: 2.5rem; font-weight: 800;">Custom</div>
+            <div style="color: var(--gray-500); font-size: 0.875rem;">Unlimited users</div>
+          </div>
+          <ul style="color: var(--gray-600); margin-bottom: 1.5rem;">
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Everything in Business
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              SSO/SAML integration
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Custom workflows
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Dedicated support
+            </li>
+            <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="16" height="16" fill="#36b37e"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              SLA guarantees
+            </li>
+          </ul>
+          <a href="../pages/contact.html?product=jira-intelligence" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Ready to Supercharge Your JIRA Workflow?</h2>
+      <p>Start your free 14-day trial today. No credit card required.</p>
+      <div class="cta-buttons">
+        <a href="../pages/signup.html?product=jira-intelligence" class="btn btn-white btn-lg">Start Free Trial</a>
+        <a href="../pages/demo.html?product=jira-intelligence" class="btn btn-outline-white btn-lg">Request Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="../pages/products.html">All Products</a>
+            <a href="nexus-rca.html">NEXUS-RCA</a>
+            <a href="synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="../pages/about.html">About</a>
+            <a href="../pages/contact.html">Contact</a>
+            <a href="../pages/careers.html">Careers</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="../pages/privacy.html">Privacy</a>
+            <a href="../pages/terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

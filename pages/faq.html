@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently Asked Questions about Viseyyon products and services.">
+  <title>FAQ | Viseyyon Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-weight='bold'>V</text></svg>">
+  <style>
+    .faq-item { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); margin-bottom: 1rem; overflow: hidden; }
+    .faq-question { padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .faq-question:hover { background: var(--gray-50); }
+    .faq-answer { padding: 0 1.5rem 1.5rem; color: var(--gray-600); line-height: 1.7; display: none; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-category { margin-bottom: 3rem; }
+    .faq-category h3 { margin-bottom: 1.5rem; font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 40px; width: auto;">
+      </a>
+      <div class="nav-menu">
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="demo.html" class="btn btn-ghost">Request Demo</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section style="padding: 160px 0 60px; background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);">
+    <div class="container">
+      <div class="section-header">
+        <h1>Frequently Asked <span class="text-gradient">Questions</span></h1>
+        <p style="font-size: 1.25rem;">Find answers to common questions about Viseyyon products and services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="section" style="background: var(--white);">
+    <div class="container" style="max-width: 800px;">
+      
+      <!-- General Questions -->
+      <div class="faq-category">
+        <h3>General Questions</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            What is Viseyyon?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Viseyyon Technologies is an AI-powered enterprise solutions company offering 32+ products across DevOps, AI/ML, security, and industry-specific solutions. We help businesses automate processes, improve efficiency, and leverage cutting-edge AI technology.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How do I get started?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            You can start by signing up for a free trial on any of our products. No credit card is required. Simply visit our Products page, select the product that fits your needs, and click "Start Free Trial" to begin.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer enterprise plans?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes! We offer custom enterprise plans with dedicated support, custom integrations, SLA guarantees, and volume discounts. Contact our sales team to discuss your requirements.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing & Billing -->
+      <div class="faq-category">
+        <h3>Pricing & Billing</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            What payment methods do you accept?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and wire transfers for enterprise customers. All payments are processed securely through Stripe.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I cancel my subscription anytime?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period. We don't offer refunds for partial months, but you won't be charged again after cancellation.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer discounts for startups or nonprofits?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes! We offer special pricing for qualified startups and registered nonprofits. Contact our sales team with documentation of your status to learn more about our discount programs.
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Questions -->
+      <div class="faq-category">
+        <h3>Technical Questions</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Is my data secure?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Absolutely. We implement enterprise-grade security including end-to-end encryption, SOC2 compliance, GDPR compliance, and regular security audits. Your data is stored in secure, redundant data centers with 99.99% uptime.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What integrations do you support?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            We support 500+ integrations including JIRA, GitHub, GitLab, Slack, Microsoft Teams, Salesforce, HubSpot, and many more. Our IntegrateX product also allows you to build custom integrations with any API.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you provide API access?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Yes, all our products come with full API access. We provide comprehensive API documentation, SDKs for popular languages (Python, JavaScript, Go, Java), and dedicated API support for enterprise customers.
+          </div>
+        </div>
+      </div>
+
+      <!-- Support -->
+      <div class="faq-category">
+        <h3>Support</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            How can I get help?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            We offer multiple support channels: email support (support@viseyyon.com), live chat on our website, comprehensive documentation, and community forums. Enterprise customers also get dedicated account managers and priority support.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What are your support hours?
+            <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            Standard support is available Monday-Friday, 9 AM - 6 PM IST. Enterprise customers have access to 24/7 support with guaranteed response times based on their SLA.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container" style="text-align: center;">
+      <h2>Still have questions?</h2>
+      <p style="margin-bottom: 2rem; opacity: 0.9;">Our team is here to help. Reach out and we'll get back to you within 24 hours.</p>
+      <a href="contact.html" class="btn btn-white btn-lg">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../images/logo.svg" alt="Viseyyon Technologies" style="height: 36px; width: auto;">
+          </div>
+          <p>AI-powered enterprise solutions.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="products.html">All Products</a>
+            <a href="../products/nexus-rca.html">NEXUS-RCA</a>
+            <a href="../products/synapse-ai.html">SYNAPSE AI</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="careers.html">Careers</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Viseyyon Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
