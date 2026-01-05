@@ -3,11 +3,8 @@ name: Deploy to Hostinger
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - 'README.md'
-      - '.gitignore'
-      - '.github/**'
-
+      workflow_dispatch:
+    
 jobs:
   deploy:
     runs-on: ubuntu-latest
