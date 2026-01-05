@@ -20,6 +20,6 @@ jobs:
         port: 21
         protocol: ftp
         local-dir: './'
-        server-dir: '/home/u399810470/domains/viseyyon.tech/public_html/'
+        server-dir: '/'
         state-name: '.ftp-deploy-sync-state.json'
         dangerous-clean-slate: false
