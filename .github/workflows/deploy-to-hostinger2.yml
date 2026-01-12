@@ -1,4 +1,4 @@
-name: Deploy to Hostinger
+name: Deploy to Hostinger viseyyon.com
 
 on:
   push:
@@ -20,6 +20,6 @@ jobs:
         port: 21
         protocol: ftp
         local-dir: './'
-        server-dir: '/'
+        server-dir: '/home/u399810470/domains/viseyyon.com/public_html/'
         state-name: '.ftp-deploy-sync-state.json'
         dangerous-clean-slate: false
