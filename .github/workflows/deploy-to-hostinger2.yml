@@ -14,12 +14,12 @@ jobs:
     - name: Deploy to Hostinger via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: 145.79.25.18
+        server: ftp.viseyyon.com
         username: u399810470.viseyyoncom
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
         protocol: ftp
         local-dir: './'
-        server-dir: '/public_html/'
+        server-dir: '/home/u399810470/domains/viseyyon.com/public_html/'
         state-name: '.ftp-deploy-sync-state.json'
         dangerous-clean-slate: false
