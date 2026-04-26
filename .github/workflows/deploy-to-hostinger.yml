@@ -14,7 +14,7 @@ jobs:
     - name: Deploy to Hostinger via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.viseyyon.tech
+        server: ftp.viseyyon.com
         username: u399810470.viseyyon
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
