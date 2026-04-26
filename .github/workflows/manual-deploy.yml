@@ -1,0 +1,67 @@
+name: Manual Deploy to Hostinger
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Deploy target'
+        required: true
+        default: 'both'
+        type: choice
+        options:
+          - both
+          - com
+          - tech
+
+jobs:
+  deploy-tech:
+    if: ${{ github.event.inputs.target == 'both' || github.event.inputs.target == 'tech' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to viseyyon.tech
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.viseyyon.com
+          username: u399810470.viseyyon
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: './'
+          server-dir: '/home/u399810470/domains/viseyyon.tech/public_html/'
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.mcp.json
+            **/deploy-to-hostinger.sh
+            **/*TROUBLESHOOTING.md
+            **/*STATUS.md
+            **/*CONFIGURATION.md
+
+  deploy-com:
+    if: ${{ github.event.inputs.target == 'both' || github.event.inputs.target == 'com' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy to viseyyon.com
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.viseyyon.com
+          username: u399810470.viseyyoncom
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: './'
+          server-dir: '/home/u399810470/domains/viseyyon.com/public_html/'
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.mcp.json
+            **/deploy-to-hostinger.sh
+            **/*TROUBLESHOOTING.md
+            **/*STATUS.md
+            **/*CONFIGURATION.md
