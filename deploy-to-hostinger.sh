@@ -16,8 +16,8 @@ FTP_SERVER="ftp.viseyyon.com"
 FTP_PORT=21
 
 # Domain-specific settings
-FTP_USER_COM="u399810470.viseyyoncom"
-FTP_USER_TECH="u399810470.viseyyon"
+FTP_USER_COM="admin"
+FTP_USER_TECH="admintech"
 REMOTE_PATH_COM="/home/u399810470/domains/viseyyon.com/public_html"
 REMOTE_PATH_TECH="/home/u399810470/domains/viseyyon.tech/public_html"
 
