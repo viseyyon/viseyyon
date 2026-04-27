@@ -101,11 +101,17 @@ const CRM = {
 
     tbody.innerHTML = this.filteredLeads.map(lead => `
       <tr class="clickable" onclick="CRM.showLeadDetails('${lead.id}')">
-        <td>${lead.first_name} ${lead.last_name}</td>
+        <td>
+          ${lead.followed ? '<span style="color: var(--warning); font-weight: bold; margin-right: 0.25rem;" title="Requires follow-up">🔔</span>' : ''}
+          ${lead.first_name} ${lead.last_name}
+        </td>
         <td>${lead.email}</td>
         <td>${lead.company || '-'}</td>
         <td>${lead.interest || '-'}</td>
-        <td><span class="status-badge status-${lead.status}">${lead.status}</span></td>
+        <td>
+          <span class="status-badge status-${lead.status}">${lead.status}</span>
+          ${lead.outcome ? `<span style="font-size: 0.7rem; margin-left: 0.25rem; color: var(--gray-600);">${lead.outcome}</span>` : ''}
+        </td>
         <td>${new Date(lead.created_at).toLocaleDateString()}</td>
         <td>
           <button class="btn btn-sm btn-secondary" onclick="event.stopPropagation(); CRM.showLeadDetails('${lead.id}')">
@@ -220,6 +226,18 @@ const CRM = {
           <span class="detail-label">Lead ID</span>
           <span class="detail-value">${lead.id.substring(0, 8)}...</span>
         </div>
+        <div class="detail-item">
+          <span class="detail-label">Outcome</span>
+          <span class="detail-value">${lead.outcome ? lead.outcome.replace('_', ' ').toUpperCase() : 'Not Set'}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Follow-up</span>
+          <span class="detail-value">${lead.followed ? '✅ Required' : '⬜ None'}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Last Contacted</span>
+          <span class="detail-value">${lead.last_contacted ? new Date(lead.last_contacted).toLocaleString() : 'Never'}</span>
+        </div>
       </div>
 
       <div class="message-box">
@@ -246,6 +264,26 @@ const CRM = {
       </div>
 
       <div class="form-group">
+        <label>Lead Outcome</label>
+        <select id="updateOutcome" class="filter-select">
+          <option value="">Not Set</option>
+          <option value="won" ${lead.outcome === 'won' ? 'selected' : ''}>Won</option>
+          <option value="lost" ${lead.outcome === 'lost' ? 'selected' : ''}>Lost</option>
+          <option value="qualified" ${lead.outcome === 'qualified' ? 'selected' : ''}>Qualified</option>
+          <option value="disqualified" ${lead.outcome === 'disqualified' ? 'selected' : ''}>Disqualified</option>
+          <option value="no_response" ${lead.outcome === 'no_response' ? 'selected' : ''}>No Response</option>
+          <option value="on_hold" ${lead.outcome === 'on_hold' ? 'selected' : ''}>On Hold</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+          <input type="checkbox" id="updateFollowed" ${lead.followed ? 'checked' : ''} style="width: auto; cursor: pointer;">
+          <span>Requires Follow-up</span>
+        </label>
+      </div>
+
+      <div class="form-group">
         <label>Notes</label>
         <textarea id="updateNotes" placeholder="Add notes about this lead...">${lead.notes || ''}</textarea>
       </div>
@@ -262,6 +300,9 @@ const CRM = {
   async updateLead(leadId) {
     const status = document.getElementById('updateStatus').value;
     const notes = document.getElementById('updateNotes').value;
+    const outcome = document.getElementById('updateOutcome').value || null;
+    const followed = document.getElementById('updateFollowed').checked;
+    const last_contacted = status === 'contacted' || followed ? new Date().toISOString() : null;
 
     try {
       const response = await fetch(`${this.supabaseUrl}/rest/v1/leads?id=eq.${leadId}`, {
@@ -272,7 +313,13 @@ const CRM = {
           'Content-Type': 'application/json',
           'Prefer': 'return=minimal'
         },
-        body: JSON.stringify({ status, notes })
+        body: JSON.stringify({
+          status,
+          notes,
+          outcome,
+          followed,
+          last_contacted
+        })
       });
 
       if (!response.ok) {
