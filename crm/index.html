@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viseyyon CRM - Lead Management</title>
+  <link rel="stylesheet" href="css/crm.css">
+</head>
+<body>
+  <div class="crm-container">
+    <!-- Header -->
+    <header class="crm-header">
+      <div class="header-content">
+        <h1>Viseyyon CRM</h1>
+        <div class="header-actions">
+          <button id="refreshBtn" class="btn btn-secondary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 4v6h-6M1 20v-6h6"/>
+              <path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 014.51 9"/>
+            </svg>
+            Refresh
+          </button>
+          <button id="logoutBtn" class="btn btn-outline">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Total Leads</div>
+        <div class="stat-value" id="totalLeads">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">New</div>
+        <div class="stat-value" id="newLeads">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">In Progress</div>
+        <div class="stat-value" id="inProgressLeads">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Converted</div>
+        <div class="stat-value" id="convertedLeads">-</div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <input type="search" id="searchInput" placeholder="Search by name, email, or company..." class="search-input">
+      <select id="statusFilter" class="filter-select">
+        <option value="">All Status</option>
+        <option value="new">New</option>
+        <option value="contacted">Contacted</option>
+        <option value="in_progress">In Progress</option>
+        <option value="converted">Converted</option>
+        <option value="lost">Lost</option>
+      </select>
+      <select id="sortBy" class="filter-select">
+        <option value="created_at_desc">Newest First</option>
+        <option value="created_at_asc">Oldest First</option>
+        <option value="name_asc">Name A-Z</option>
+        <option value="name_desc">Name Z-A</option>
+      </select>
+    </div>
+
+    <!-- Leads Table -->
+    <div class="table-container">
+      <table class="leads-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Interest</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="leadsTableBody">
+          <tr>
+            <td colspan="7" class="loading">Loading leads...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Lead Details Modal -->
+  <div id="leadModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Lead Details</h2>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Lead details will be inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal active">
+    <div class="modal-content modal-small">
+      <div class="modal-header">
+        <h2>CRM Login</h2>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="form-group">
+            <label>Access Code</label>
+            <input type="password" id="accessCode" placeholder="Enter your access code" required autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <p class="help-text">Enter your Supabase anon key or custom access code</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/crm.js"></script>
+</body>
+</html>

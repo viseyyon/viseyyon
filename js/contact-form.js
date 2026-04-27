@@ -6,8 +6,8 @@
 
   // Configuration
   const CONFIG = {
-    // API endpoint - Telegram notifications
-    apiEndpoint: 'https://viseyyon-website2.vercel.app/api/telegram-notify',
+    // API endpoint - CRM with Telegram notifications
+    apiEndpoint: 'https://viseyyon-website2.vercel.app/api/crm-submit',
 
     // Fallback email if API fails
     fallbackEmail: 'hello@viseyyon.in',
