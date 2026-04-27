@@ -7,8 +7,7 @@
   // Configuration
   const CONFIG = {
     // API endpoint - Telegram notifications
-    apiEndpoint: '/api/telegram-notify',  // For Vercel deployment
-    // Or use absolute URL: 'https://viseyyon.vercel.app/api/telegram-notify'
+    apiEndpoint: 'https://viseyyon.vercel.app/api/telegram-notify',
 
     // Fallback email if API fails
     fallbackEmail: 'hello@viseyyon.in',
